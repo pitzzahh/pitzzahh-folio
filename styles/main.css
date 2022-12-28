@@ -33,12 +33,14 @@ img {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
+  padding: 25px;
 }
 .nav-bar ul {
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
   margin: 0;
-  padding: 25px;
+  padding: 0;
 }
 .nav-bar ul li {
   padding: 0 1em;
@@ -85,7 +87,11 @@ img {
   font-size: 13px;
   text-transform: uppercase;
 }
+.hero .technologies {
+  display: flex;
+  flex-direction: column;
+}
 .hero .technologies p {
   display: flex;
-  color: var(--dark-mode-main-info-color);
+  color: var(--dark-mode-color);
 }/*# sourceMappingURL=main.css.map */

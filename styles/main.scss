@@ -35,12 +35,14 @@ img {
   justify-content: flex-start;
   align-items: center;
   margin: 0;
-  
+  padding: 25px;
   ul {
     display: flex;
+    align-items: flex-start;
     justify-content: flex-start;
     margin: 0;
-    padding: 25px;
+    padding: 0;
+
     li {
       padding: 0 1em;
     }
@@ -98,9 +100,11 @@ img {
   }
 
   .technologies {
+    display: flex;
+    flex-direction: column;
     p {
       display: flex;
-      color: var(--dark-mode-main-info-color);
+      color: var(--dark-mode-color);
     }
   }
 }
