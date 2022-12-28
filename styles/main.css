@@ -1,0 +1,91 @@
+:root {
+  font-family: "Inter", "sans-serif";
+  --light-mode-color: black;
+  --dark-mode-color: white;
+  --dark-mode-cs-color: #a1c181;
+  --light-mode-cs-color: #6db33f;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.nav-container a {
+  color: var(--dark-mode-main-info-color);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 25px;
+}
+.nav-bar ul li {
+  padding: 0 1em;
+}
+.nav-bar ul a {
+  color: var(--dark-mode-color);
+}
+.nav-bar ul a:hover {
+  text-decoration: underline;
+}
+
+.hero .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 4em;
+}
+.hero .info img {
+  width: 100px;
+  border-radius: 50%;
+}
+.hero .info p {
+  padding-top: 1em;
+  color: var(--dark-mode-color);
+}
+.hero .info #main-info {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 5px 20px 5px 5px;
+}
+.hero .info #main-info #my-name {
+  color: #fe7f2d;
+}
+.hero .info #main-info #my-cs {
+  color: var(--light-mode-cs-color);
+}
+.hero .info #sub-info {
+  color: rgb(136, 136, 136);
+  padding: 5px;
+  margin: 0;
+  letter-spacing: 10%;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.hero .technologies p {
+  display: flex;
+  color: var(--dark-mode-main-info-color);
+}/*# sourceMappingURL=main.css.map */
