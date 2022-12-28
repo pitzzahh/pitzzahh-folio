@@ -17,14 +17,7 @@
     <header>
       <nav class="nav-bar">
         <!-- Menu -->
-        <!-- <svg
-          id="menu"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          data-hide="false"
-        >
+        <svg id="menu" viewBox="0 0 20 20" fill="none" data-hide="false">
           <path
             d="M2.5 7.5H17.5"
             stroke="currentColor"
@@ -40,22 +33,7 @@
             stroke-linejoin="round"
           ></path>
         </svg>
-        <svg
-          id="close-menu"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-          shape-rendering="geometricPrecision"
-          data-hide="false"
-        >
-          <path d="M18 6L6 18"></path>
-          <path d="M6 6l12 12"></path>
-        </svg> -->
+
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Projects</a></li>
@@ -67,8 +45,10 @@
     <!-- Add toggle button for dark mode and light mode-->
 
     <main>
-      <div class="hero">
-        <div class="info">
+      <section>
+        <div class="info"></div>
+
+        <div class="hero">
           <img
             src="assets/avatar.jpg"
             alt="A picture of the owner of this webiste"
@@ -81,177 +61,188 @@
           <p id="sub-info">
             Software developer, embracing web development, and UI/UX design.
           </p>
-        </div>
-
-        <div class="technologies">
-          <p>Technologies</p>
-          <div>
-            <img src="assets/technologies/html.svg" alt="HTML 5 icon" />
-            <img src="assets/technologies/css.svg" alt="CSS 3 icon" />
-            <img
-              src="assets/technologies/python.svg"
-              alt="Python programming language icon"
-            />
-            <img
-              src="assets/technologies/maven.svg"
-              alt="maven build tool icon"
-            />
-            <img
-              src="assets/technologies/spring.svg"
-              alt="Spring framework icon"
-            />
-            <img
-              src="assets/technologies/java.svg"
-              alt="Java programming language icon"
-            />
-            <img
-              src="assets/technologies/git.svg"
-              alt="Git version control software icon"
-            />
-            <img
-              src="assets/technologies/github.svg"
-              alt="Github hosting service icon"
-            />
-            <img
-              src="assets/technologies/postgres.svg"
-              alt="PostgreSQL Database Management System icon"
-            />
-            <img
-              src="assets/technologies/sqlite.svg"
-              alt="SQLite file based database icon"
-            />
+  
+          <div class="technologies">
+            <p>Technologies</p>
+            <div>
+              <img src="assets/technologies/html.svg" alt="HTML 5 icon" />
+              <img src="assets/technologies/css.svg" alt="CSS 3 icon" />
+              <img
+                src="assets/technologies/python.svg"
+                alt="Python programming language icon"
+              />
+              <img
+                src="assets/technologies/maven.svg"
+                alt="maven build tool icon"
+              />
+              <img
+                src="assets/technologies/spring.svg"
+                alt="Spring framework icon"
+              />
+              <img
+                src="assets/technologies/java.svg"
+                alt="Java programming language icon"
+              />
+              <img
+                src="assets/technologies/git.svg"
+                alt="Git version control software icon"
+              />
+              <img
+                src="assets/technologies/github.svg"
+                alt="Github hosting service icon"
+              />
+              <img
+                src="assets/technologies/postgres.svg"
+                alt="PostgreSQL Database Management System icon"
+              />
+              <img
+                src="assets/technologies/sqlite.svg"
+                alt="SQLite file based database icon"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="projects">
+        <div>
+          <p>Projects</p>
+          <div>
+            <div id="projects-first-row">
+              <div class="atm">
+                <p>Automated Teller Machine API</p>
+                <div class="atm-details">
+                  <button>
+                    <a
+                      href="https://github.com/pitzzahh/automated-teller-machine-API"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <p>Java</p>
+                </div>
+              </div>
+  
+              <div class="util-classes">
+                <p>util-classes</p>
+                <div class="util-classes-details">
+                  <button>
+                    <a href="https://github.com/pitzzahh/util-classes"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <p>Java</p>
+                </div>
+              </div>
+  
+              <div class="pin-generator">
+                <p>pin-generator</p>
+                <div class="pin-gen-details">
+                  <button>
+                    <a href="https://github.com/pitzzahh/pin-generator"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <p>Java</p>
+                </div>
+              </div>
+  
+              <div class="pub">
+                <p>PUB</p>
+                <div class="pub-details">
+                  <button>
+                    <a href="https://github.com/pitzzahh/atm-gui"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <ul>
+                    <li>Java</li>
+                    <li>JavaFX</li>
+                    <li>Scene Builder</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <div id="projects-second-row">
+              <div class="iLib">
+                <p>iLib</p>
+                <div class="iLib-details">
+                  <button>
+                    <a
+                      href="https://github.com/pitzzahh/Library-Management-System"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <p>Java</p>
+                </div>
+              </div>
+  
+              <div class="payroll">
+                <p>payroll</p>
+                <div class="payroll-details">
+                  <button>
+                    <a href="https://github.com/pitzzahh/payroll"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <ul>
+                    <li>Java</li>
+                    <li>JavaFX</li>
+                    <li>Scene Builder</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="pos">
+                <p>Point-Of-Sale</p>
+                <div class="pos-details">
+                  <button>
+                    <a href="https://github.com/pitzzahh/point-of-sale"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <ul>
+                    <li>Java</li>
+                    <li>Swing</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="pitzzahh-bot">
+                <p>pitzzahh-bot</p>
+                <div class="pitzzahh-details">
+                  <button>
+                    <a href="https://github.com/pitzzahh/pitzzahh-bot"
+                      ><img src="assets/icons/github.svg" alt="GitHub icon"
+                    /></a>
+                  </button>
+                  <ul>
+                    <li>Java</li>
+                    <li>JDA</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-me">
+        <div>
+          <p>About Me</p>
+        </div>
+      </section>
+
     </main>
 
-    <section class="projects">
+    <footer>
       <div>
-        <p>Projects</p>
-        <div>
-          <div id="projects-first-row">
-            <div class="atm">
-              <p>Automated Teller Machine API</p>
-              <div class="atm-details">
-                <button>
-                  <a
-                    href="https://github.com/pitzzahh/automated-teller-machine-API"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <p>Java</p>
-              </div>
-            </div>
-
-            <div class="util-classes">
-              <p>util-classes</p>
-              <div class="util-classes-details">
-                <button>
-                  <a href="https://github.com/pitzzahh/util-classes"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <p>Java</p>
-              </div>
-            </div>
-
-            <div class="pin-generator">
-              <p>pin-generator</p>
-              <div class="pin-gen-details">
-                <button>
-                  <a href="https://github.com/pitzzahh/pin-generator"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <p>Java</p>
-              </div>
-            </div>
-
-            <div class="pub">
-              <p>PUB</p>
-              <div class="pub-details">
-                <button>
-                  <a href="https://github.com/pitzzahh/atm-gui"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <ul>
-                  <li>Java</li>
-                  <li>JavaFX</li>
-                  <li>Scene Builder</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div id="projects-second-row">
-            <div class="iLib">
-              <p>iLib</p>
-              <div class="iLib-details">
-                <button>
-                  <a
-                    href="https://github.com/pitzzahh/Library-Management-System"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <p>Java</p>
-              </div>
-            </div>
-
-            <div class="payroll">
-              <p>payroll</p>
-              <div class="payroll-details">
-                <button>
-                  <a href="https://github.com/pitzzahh/payroll"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <ul>
-                  <li>Java</li>
-                  <li>JavaFX</li>
-                  <li>Scene Builder</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="pos">
-              <p>Point-Of-Sale</p>
-              <div class="pos-details">
-                <button>
-                  <a href="https://github.com/pitzzahh/point-of-sale"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <ul>
-                  <li>Java</li>
-                  <li>Swing</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="pitzzahh-bot">
-              <p>pitzzahh-bot</p>
-              <div class="pitzzahh-details">
-                <button>
-                  <a href="https://github.com/pitzzahh/pitzzahh-bot"
-                    ><img src="assets/icons/github.svg" alt="GitHub icon"
-                  /></a>
-                </button>
-                <ul>
-                  <li>Java</li>
-                  <li>JDA</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p>© 2021 Pitz</p>
       </div>
-    </section>
+    </footer>
 
-    <section class="about-me">
-      <div>
-        <p>About Me</p>
-      </div>
-    </section>
+
+
+
   </body>
 </html>
