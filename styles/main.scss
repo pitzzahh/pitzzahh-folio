@@ -4,7 +4,6 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-
 }
 
 * {
@@ -17,6 +16,7 @@ body {
   margin: 0;
   height: 100vh;
   color: var(--dark-mode-color);
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -35,6 +35,7 @@ img {
 #nav-bar {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 
   .toggle-button {
     width: 30px;
@@ -51,15 +52,14 @@ img {
     display: none;
     flex-direction: column;
     padding: 1em 1em;
-    width: 100%;
 
     .active {
-      color: #FE7F2D;
+      color: #fe7f2d;
       font-weight: bold;
     }
 
     li {
-      padding: .5em 0;
+      padding: 0.5em 0;
     }
 
     li:hover {
@@ -67,11 +67,10 @@ img {
     }
     hr {
       width: 100%;
-      border: 1px solid #A1C181;
+      border: 1px solid #a1c181;
     }
   }
 }
-
 
 #hero {
   display: flex;
@@ -80,7 +79,7 @@ img {
   .info {
     display: flex;
     flex-direction: column;
-    padding: 2.5em;
+    padding: 2em;
     .avatar {
       width: 7.5rem;
       border-radius: 50%;
@@ -93,11 +92,11 @@ img {
     #main-info {
       font-size: 2em;
       #my-name {
-        color: #FE7F2D;
+        color: #fe7f2d;
       }
 
       #my-cs {
-        color: #A1C181;
+        color: #a1c181;
       }
     }
 
@@ -122,14 +121,18 @@ img {
   .technologies {
     padding: 2em;
     p {
-      display: flex;
+      display: block;
       font-size: 20px;
     }
     div {
-
+      display: grid;
+      padding: 2em 1em;
+      grid-template-columns: auto auto auto auto auto;
+      align-items: center;
+      justify-items: center;
+      
       img {
-        display: block;
-        padding: .1em;
+        padding: 0.1em;
       }
 
       .normal {
@@ -139,10 +142,75 @@ img {
       .custom {
         width: 28px;
       }
-      display: grid;
-      padding: inherit;
-      grid-template-columns: auto auto auto auto auto;
     }
   }
 }
 
+#projects {
+  display: flex;
+  flex-direction: column;
+  p {
+    padding: 2em;
+    font-size: 20px;
+  }
+  .list-projects {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    .project {
+      display: grid;
+      grid-template-rows: auto auto;
+      width: 200px;
+      height: 90px;
+      border: 3px solid #fe7f2d;
+      border-radius: 15px;
+      margin-bottom: 1em;
+
+      p {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        font-size: 12px;
+        padding: 0;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0;
+          li {
+            font-size: 8px;
+            padding: 0px .5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+#about-me {
+  p {
+    padding: 2em;
+    font-size: 20px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  p {
+    font-size: 12px;
+  }
+}
