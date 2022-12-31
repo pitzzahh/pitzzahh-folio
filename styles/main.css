@@ -1,5 +1,5 @@
 :root {
-  font-family: "Inter", "sans-serif";
+  font-family: "Inter", "Arial", sans-serif;
   --light-mode-color: black;
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: black;
+  background: black;
   margin: 0;
   height: 100vh;
   color: var(--dark-mode-color);
@@ -24,8 +24,107 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
   width: 100%;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+#nav-bar .toggle-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  margin: 2.5em;
+}
+#nav-bar ul {
+  display: none;
+  flex-direction: column;
+  padding: 1em 1em;
+  width: 100%;
+}
+#nav-bar ul .active {
+  color: #FE7F2D;
+  font-weight: bold;
+}
+#nav-bar ul li {
+  padding: 0.5em 0;
+}
+#nav-bar ul li:hover {
+  text-decoration: underline;
+}
+#nav-bar ul hr {
+  width: 100%;
+  border: 1px solid #A1C181;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+#hero .info {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+}
+#hero .info .avatar {
+  width: 7.5rem;
+  border-radius: 50%;
+}
+#hero .info p {
+  padding: 1em 0 0;
+}
+#hero .info #main-info {
+  font-size: 2em;
+}
+#hero .info #main-info #my-name {
+  color: #FE7F2D;
+}
+#hero .info #main-info #my-cs {
+  color: #A1C181;
+}
+#hero .info #sub-info {
+  list-style: 1.5em;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 7.5%;
+  text-transform: uppercase;
+}
+#hero .call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 3em;
+}
+#hero .technologies {
+  padding: 2em;
+}
+#hero .technologies p {
+  display: flex;
+  font-size: 20px;
+}
+#hero .technologies div {
+  display: grid;
+  padding: inherit;
+  grid-template-columns: auto auto auto auto auto;
+}
+#hero .technologies div img {
+  display: block;
+  padding: 0.1em;
+}
+#hero .technologies div .normal {
+  width: 40px;
+}
+#hero .technologies div .custom {
+  width: 28px;
 }/*# sourceMappingURL=main.css.map */

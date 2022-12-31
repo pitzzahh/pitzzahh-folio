@@ -11,44 +11,62 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
-    <title>Portfolio</title>
+    <title>Peter John Arao</title>
   </head>
   <body>
     <header>
-      <nav class="nav-bar">
+      <nav id="nav-bar">
         <!-- Menu -->
-        <svg id="menu" viewBox="0 0 20 20" fill="none" data-hide="false">
-          <path
-            d="M2.5 7.5H17.5"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-          <path
-            d="M2.5 12.5H17.5"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-        </svg>
+        <button id="menu" class="toggle-button">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 11.25H26.25"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.75 19.25H26.25"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
 
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">Home</a></li>
+          <hr />
           <li><a href="#">Projects</a></li>
+          <hr />
           <li><a href="#">About Me</a></li>
+          <hr />
           <li><a href="#">Contact</a></li>
+          <hr />
         </ul>
+
+        <!-- Toggle Dark Mode -->
+        <!-- <button id="mode-toggle" class="toggle-button">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="30" rx="10" fill="#808080"/>
+            <path d="M14.6154 7.5V8.33333M14.6154 21.6667V22.5M22.3077 15H21.453M7.7778 15H6.9231M20.0547 20.3033L19.4504 19.7142M9.78036 10.2858L9.17609 9.69667M20.0547 9.69667L19.4504 10.2858M9.78036 19.7142L9.17609 20.3033M18.0342 15C18.0342 15.8841 17.674 16.7319 17.0329 17.357C16.3917 17.9821 15.5221 18.3333 14.6154 18.3333C13.7087 18.3333 12.8391 17.9821 12.1979 17.357C11.5568 16.7319 11.1966 15.8841 11.1966 15C11.1966 14.1159 11.5568 13.2681 12.1979 12.643C12.8391 12.0179 13.7087 11.6667 14.6154 11.6667C15.5221 11.6667 16.3917 12.0179 17.0329 12.643C17.674 13.2681 18.0342 14.1159 18.0342 15V15Z" stroke="#EDE3E3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button> -->
       </nav>
     </header>
     <!-- Add toggle button for dark mode and light mode-->
 
     <main>
-      <section>
-        <div class="info"></div>
-
-        <div class="hero">
+      <section id="hero">
+        <div class="info">
           <img
             src="assets/avatar.jpg"
             alt="A picture of the owner of this webiste"
@@ -61,50 +79,115 @@
           <p id="sub-info">
             Software developer, embracing web development, and UI/UX design.
           </p>
-  
-          <div class="technologies">
-            <p>Technologies</p>
-            <div>
-              <img src="assets/technologies/html.svg" alt="HTML 5 icon" />
-              <img src="assets/technologies/css.svg" alt="CSS 3 icon" />
-              <img
-                src="assets/technologies/python.svg"
-                alt="Python programming language icon"
-              />
-              <img
-                src="assets/technologies/maven.svg"
-                alt="maven build tool icon"
-              />
-              <img
-                src="assets/technologies/spring.svg"
-                alt="Spring framework icon"
-              />
-              <img
-                src="assets/technologies/java.svg"
-                alt="Java programming language icon"
-              />
-              <img
-                src="assets/technologies/git.svg"
-                alt="Git version control software icon"
-              />
-              <img
-                src="assets/technologies/github.svg"
-                alt="Github hosting service icon"
-              />
-              <img
-                src="assets/technologies/postgres.svg"
-                alt="PostgreSQL Database Management System icon"
-              />
-              <img
-                src="assets/technologies/sqlite.svg"
-                alt="SQLite file based database icon"
-              />
-            </div>
+        </div>
+
+        <div class="call-to-action">
+          <svg
+            width="24"
+            height="57"
+            viewBox="0 0 24 57"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="14" r="7" fill="url(#paint0_linear_167_690)" />
+            <rect
+              x="0.5"
+              y="0.5"
+              width="23"
+              height="56"
+              rx="11.5"
+              stroke="url(#paint1_linear_167_690)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_167_690"
+                x1="12"
+                y1="-4"
+                x2="12"
+                y2="38"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#A4470B" />
+                <stop offset="1" stop-color="#FF6400" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_167_690"
+                x1="12"
+                y1="0"
+                x2="12"
+                y2="80"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#BB500A" />
+                <stop offset="1" stop-color="#FF6400" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="technologies">
+          <p>Technologies</p>
+          <div>
+            <img
+              class="normal"
+              src="assets/technologies/html.svg"
+              alt="HTML 5 icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/css.svg"
+              alt="CSS 3 icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/python.svg"
+              alt="Python programming language icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/maven.svg"
+              alt="maven build tool icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/spring.svg"
+              alt="Spring framework icon"
+            />
+            <img
+              class="custom"
+              src="assets/technologies/java.svg"
+              alt="Java programming language icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/git.svg"
+              alt="Git version control software icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/github.svg"
+              alt="Github hosting service icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/postgres.svg"
+              alt="PostgreSQL Database Management System icon"
+            />
+            <img
+              class="normal"
+              src="assets/technologies/sqlite.svg"
+              alt="SQLite file based database icon"
+            />
+            <img
+              class="custom"
+              src="assets/technologies/figma.svg"
+              alt="Figma icon"
+            />
           </div>
         </div>
       </section>
 
-      <section class="projects">
+      <section id="projects">
         <div>
           <p>Projects</p>
           <div>
@@ -121,7 +204,7 @@
                   <p>Java</p>
                 </div>
               </div>
-  
+
               <div class="util-classes">
                 <p>util-classes</p>
                 <div class="util-classes-details">
@@ -133,7 +216,7 @@
                   <p>Java</p>
                 </div>
               </div>
-  
+
               <div class="pin-generator">
                 <p>pin-generator</p>
                 <div class="pin-gen-details">
@@ -145,7 +228,7 @@
                   <p>Java</p>
                 </div>
               </div>
-  
+
               <div class="pub">
                 <p>PUB</p>
                 <div class="pub-details">
@@ -162,7 +245,7 @@
                 </div>
               </div>
             </div>
-  
+
             <div id="projects-second-row">
               <div class="iLib">
                 <p>iLib</p>
@@ -176,7 +259,7 @@
                   <p>Java</p>
                 </div>
               </div>
-  
+
               <div class="payroll">
                 <p>payroll</p>
                 <div class="payroll-details">
@@ -192,7 +275,7 @@
                   </ul>
                 </div>
               </div>
-  
+
               <div class="pos">
                 <p>Point-Of-Sale</p>
                 <div class="pos-details">
@@ -207,7 +290,7 @@
                   </ul>
                 </div>
               </div>
-  
+
               <div class="pitzzahh-bot">
                 <p>pitzzahh-bot</p>
                 <div class="pitzzahh-details">
@@ -232,7 +315,6 @@
           <p>About Me</p>
         </div>
       </section>
-
     </main>
 
     <footer>
@@ -240,9 +322,5 @@
         <p>© 2021 Pitz</p>
       </div>
     </footer>
-
-
-
-
   </body>
 </html>
