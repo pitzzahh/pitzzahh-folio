@@ -4,6 +4,8 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
+
+  --project-gradient: linear-gradient(to right, rgba(254,127,45,1) 5%, rgba(95,153,136,1) 100%);
 }
 
 * {
@@ -65,6 +67,7 @@ img {
     li:hover {
       text-decoration: underline;
     }
+
     hr {
       width: 100%;
       border: 1px solid #a1c181;
@@ -115,14 +118,14 @@ img {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 3em;
+    margin: 3em 0;
   }
 
   .technologies {
     padding: 2em;
     p {
       display: block;
-      font-size: 20px;
+      font-size: 1.25em;
     }
     div {
       display: grid;
@@ -130,7 +133,7 @@ img {
       grid-template-columns: auto auto auto auto auto;
       align-items: center;
       justify-items: center;
-      
+
       img {
         padding: 0.1em;
       }
@@ -155,29 +158,33 @@ img {
   }
   .list-projects {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
     justify-content: center;
+   
     .project {
       display: grid;
       grid-template-rows: auto auto;
-      width: 200px;
-      height: 90px;
-      border: 3px solid #fe7f2d;
+      width: 150px;
+      height: 75px;
+      background: var(--project-gradient);
+      border-radius: 50em;
       border-radius: 15px;
-      margin-bottom: 1em;
-
+      margin: .2em;
       p {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-self: center;
         font-size: 12px;
         padding: 0;
+        grid-row: span 8;
       }
 
       .details {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
+        // set padding for left and bottom to 0.5em using shorthand
+        padding: 0.5em;
         img {
           width: 15px;
           height: 15px;
@@ -189,7 +196,7 @@ img {
           padding: 0;
           li {
             font-size: 8px;
-            padding: 0px .5em;
+            padding: 0px 0.5em;
           }
         }
       }
@@ -212,5 +219,8 @@ footer {
   padding-bottom: 1em;
   p {
     font-size: 12px;
+    span {
+      color: #d33432;
+    }
   }
 }
