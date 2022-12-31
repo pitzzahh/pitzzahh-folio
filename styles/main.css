@@ -4,7 +4,7 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  --left-padding-mobile: 2em;
+  --left-padding-mobile: 2rem;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
   --project-gradient: linear-gradient(to right, rgba(254,127,45,1) 5%, rgba(95,153,136,1) 100%);
@@ -23,6 +23,7 @@ body {
 }
 body .left-alignment {
   padding-left: var(--left-padding-mobile);
+  font-weight: bold;
 }
 
 ul {
@@ -92,6 +93,7 @@ img {
 }
 #hero .info #main-info {
   font-size: 2em;
+  font-weight: bold;
 }
 #hero .info #main-info #my-name {
   color: #fe7f2d;
@@ -139,7 +141,7 @@ img {
   flex-direction: column;
 }
 #projects p {
-  padding: 2em;
+  padding: 2em var(--left-padding-mobile);
   font-size: 20px;
 }
 #projects .list-projects {
@@ -187,23 +189,26 @@ img {
 }
 
 #about-me .title {
-  padding-left: var(--left-padding-mobile);
+  padding: 1em var(--left-padding-mobile);
   font-size: 20px;
 }
 #about-me .sub-title {
-  padding: 0 var(--left-padding-mobile);
+  padding: 1em var(--left-padding-mobile);
   font-size: 16px;
-}
-#about-me p {
-  padding: 1.375em;
-  font-size: 0.875em;
+  font-weight: normal;
 }
 #about-me .details {
+  padding: 0 var(--left-padding-mobile);
   text-align: right;
+  font-size: 0.875em;
 }
-#about-me .sub-details {
+#about-me .sub-detail {
+  font-size: 0.875em;
+  font-style: light;
   margin-bottom: 0.78125em;
   text-align: left;
+  padding: 0 var(--left-padding-mobile);
+  font-weight: normal;
 }
 
 footer {

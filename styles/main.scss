@@ -4,7 +4,9 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  --left-padding-mobile: 2em;
+  // 32px to rem
+  
+  --left-padding-mobile: 2rem;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
   --project-gradient: linear-gradient(to right, rgba(254,127,45,1) 5%, rgba(95,153,136,1) 100%);
@@ -23,6 +25,7 @@ body {
 
   .left-alignment {
     padding-left: var(--left-padding-mobile);
+    font-weight: bold;
   }
 
 }
@@ -100,6 +103,7 @@ img {
 
     #main-info {
       font-size: 2em;
+      font-weight: bold;
       #my-name {
         color: #fe7f2d;
       }
@@ -158,9 +162,10 @@ img {
   display: flex;
   flex-direction: column;
   p {
-    padding: 2em;
+    padding: 2em var(--left-padding-mobile);
     font-size: 20px;
   }
+  
   .list-projects {
     display: grid;
     grid-template-columns: auto auto;
@@ -210,27 +215,29 @@ img {
 
 #about-me {
   .title {
-    padding-left: var(--left-padding-mobile);
+    padding: 1em var(--left-padding-mobile);
     font-size: 20px;
   }
 
   .sub-title {
-    padding: 0 var(--left-padding-mobile);
+    padding: 1em var(--left-padding-mobile);
     font-size: 16px;
-  }
-
-  p {
-    padding: 1.375em;
-    font-size: 0.875em;
+    font-weight: normal;
   }
 
   .details {
+    padding: 0 var(--left-padding-mobile);
     text-align: right;
+    font-size: 0.875em;
   }
 
-  .sub-details {
+  .sub-detail {
+    font-size: 0.875em;
+    font-style: light;
     margin-bottom: 0.78125em;
     text-align: left;
+    padding: 0 var(--left-padding-mobile);
+    font-weight: normal;
   }
 }
 
