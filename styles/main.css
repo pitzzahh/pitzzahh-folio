@@ -52,19 +52,30 @@ img {
   list-style: none;
   display: none;
 }
+#nav-bar ul li .active {
+  font-weight: bold;
+  color: #fe7f2d;
+}
+#nav-bar ul li:hover {
+  text-decoration: underline;
+}
+#nav-bar ul a {
+  text-decoration: none;
+}
 
 #hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 1em false;
+  padding: 1em var(--padding) 0.5em var(--padding);
 }
 #hero .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1em var(--padding) 0.5em var(--padding);
+  width: 100%;
+  padding: var(--padding);
 }
 #hero .info .avatar {
   width: 7.5rem;

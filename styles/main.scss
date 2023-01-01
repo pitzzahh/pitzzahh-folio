@@ -52,6 +52,19 @@ img {
   ul {
     list-style: none;
     display: none;
+    li {
+      .active {
+        font-weight: bold;
+        color: #fe7f2d;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -60,12 +73,13 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 1em variable-exists($name: --padding);
+  padding: 1em var(--padding) .5em var(--padding);
   .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1em var(--padding) .5em var(--padding);
+    width: 100%;
+    padding: var(--padding);
     .avatar {
       width: 7.5rem;
       border-radius: 50%;
