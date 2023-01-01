@@ -54,7 +54,7 @@ img {
 
 #nav-bar {
   display: none;
-  position: absolute;
+  position: fixed;
   padding: var(--padding-mobile);
   background-color: #0D0D0D;
   width: 100%;
