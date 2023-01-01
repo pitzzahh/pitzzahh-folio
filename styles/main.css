@@ -18,6 +18,7 @@
     rgba(95, 153, 136, 1) 100%
   );
   --bg-image: url("../assets/bg.svg");
+  --display: flex;
 }
 
 body {
@@ -40,27 +41,49 @@ img {
 }
 
 #nav-bar {
+  padding: 2em var(--padding);
+}
+#nav-bar div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 2em var(--padding);
+}
+#nav-bar #menu {
+  display: var(--display);
+}
+#nav-bar #menu:active {
+  display: none;
 }
 #nav-bar #close {
   display: none;
 }
-#nav-bar ul {
-  list-style: none;
-  display: none;
+#nav-bar #close:active {
+  display: var(--display);
 }
-#nav-bar ul li .active {
+#nav-bar #mode-toggle {
+  display: var(--display);
+}
+#nav-bar #nav-links {
+  display: none;
+  flex-flow: column;
+  list-style: none;
+  padding-top: var(--padding);
+  width: 100%;
+}
+#nav-bar #nav-links li {
+  padding: 0.5em 0;
+}
+#nav-bar #nav-links li .active {
   font-weight: bold;
   color: #fe7f2d;
 }
-#nav-bar ul li:hover {
+#nav-bar #nav-links li:hover {
   text-decoration: underline;
 }
-#nav-bar ul a {
+#nav-bar #nav-links a {
   text-decoration: none;
+}
+#nav-bar #nav-links:active {
+  display: var(--display);
 }
 
 #hero {
@@ -68,7 +91,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em var(--padding) 0.5em var(--padding);
+  padding: 1em var(--padding) 0 var(--padding);
 }
 #hero .info {
   display: flex;
@@ -106,7 +129,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 4em 0;
+  margin: 2em 0;
 }
 
 #technologies {
@@ -114,7 +137,7 @@ img {
   flex-direction: column;
 }
 #technologies p {
-  padding: 2em var(--padding);
+  padding: 1em var(--padding);
   font-size: 20px;
 }
 #technologies div {
@@ -188,7 +211,7 @@ img {
 }
 
 #about-me .title {
-  padding: 1em var(--padding);
+  padding: 2em var(--padding);
   font-size: 20px;
 }
 #about-me .sub-title {
@@ -270,33 +293,27 @@ footer p span {
   color: #d33432;
 }
 
-@media only screen and (min-width: 500px) {
-  #menu {
-    display: none;
-  }
+@media only screen and (min-width: 550px) {
   #nav-bar {
     display: flex;
-    position: static;
-    align-self: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    background: transparent;
+    align-items: center;
   }
-  #nav-bar ul {
-    display: flex;
-    flex-direction: row;
-  }
-  #nav-bar ul li {
-    padding: 0 1em;
-  }
-  #nav-bar #close {
+  #nav-bar #menu {
     display: none;
   }
+  #nav-bar #nav-links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  #nav-bar #nav-links li {
+    padding: 0px 1em;
+  }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
   :root {
     --padding: 12rem;
-  }
-  #info {
-    flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=main.css.map */

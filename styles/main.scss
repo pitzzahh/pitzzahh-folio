@@ -18,6 +18,7 @@
     rgba(95, 153, 136, 1) 100%
   );
   --bg-image: url("../assets/bg.svg");
+  --display: flex;
 }
 
 body {
@@ -42,17 +43,40 @@ img {
 }
 
 #nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 2em var(--padding);
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #menu {
+    display: var(--display);
+    &:active {
+      display: none;
+    }
+  }
+
   #close {
     display: none;
+    &:active {
+      display: var(--display);
+    }
   }
-  ul {
-    list-style: none;
+
+  #mode-toggle {
+    display: var(--display);
+  }
+
+  #nav-links {
     display: none;
+    flex-flow: column;
+    list-style: none;
+    padding-top: var(--padding);
+    width: 100%;
+
     li {
+      padding: 0.5em 0;
       .active {
         font-weight: bold;
         color: #fe7f2d;
@@ -65,6 +89,10 @@ img {
     a {
       text-decoration: none;
     }
+
+    &:active {
+      display: var(--display);
+    }
   }
 }
 
@@ -73,7 +101,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em var(--padding) .5em var(--padding);
+  padding: 1em var(--padding) 0 var(--padding);
   .info {
     display: flex;
     flex-direction: column;
@@ -115,18 +143,18 @@ img {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 4em 0;
+    margin: 2em 0;
   }
-
 }
 
 #technologies {
   display: flex;
   flex-direction: column;
   p {
-    padding: 2em var(--padding);
+    padding: 1em var(--padding);
     font-size: 20px;
   }
+
   div {
     display: grid;
     padding: 2em calc(var(--padding) * 2);
@@ -207,7 +235,7 @@ img {
 
 #about-me {
   .title {
-    padding: 1em var(--padding);
+    padding: 2em var(--padding);
     font-size: 20px;
   }
 
@@ -296,36 +324,30 @@ footer {
   }
 }
 
-@media only screen and (min-width: 500px) {
-  #menu {
-    display: none;
-  }
-
+@media only screen and (min-width: 550px) {
   #nav-bar {
     display: flex;
-    position: static;
-    align-self: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    background: transparent;
-    ul {
-      display: flex;
-      flex-direction: row;
-      li {
-        padding: 0 1em;
-      }
+    align-items: center;
+    #menu {
+      display: none;
     }
 
-    #close {
-      display: none;
+    #nav-links {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+
+      li {
+        padding: 0px 1em;
+      }
     }
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
   :root {
     --padding: 12rem;
-  }
-  #info {
-    flex-direction: column-reverse;
   }
 }
