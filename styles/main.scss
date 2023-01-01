@@ -259,7 +259,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 0;
+    padding: 1em 0 .5em 0;
     .mail {
       height: var(--height);
       width: 100%;
@@ -273,12 +273,18 @@ img {
     }
   }
 
-  textarea {
-    display: block;
-    padding: 1em;
-    border: none;
-    border-radius: 10px;
-    background: #383838;
+  .message-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    textarea {
+      display: block;
+      padding: 1em;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background: #383838;
+    }
   }
 }
 

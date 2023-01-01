@@ -235,7 +235,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
+  padding: 1em 0 0.5em 0;
 }
 #contact .email .mail {
   height: var(--height);
@@ -248,9 +248,15 @@ img {
 #contact .email svg {
   height: var(--height);
 }
-#contact textarea {
+#contact .message-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact .message-container textarea {
   display: block;
   padding: 1em;
+  width: 100%;
   border: none;
   border-radius: 10px;
   background: #383838;
