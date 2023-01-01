@@ -1,11 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: "Inter", "Arial", "Consolas", sans-serif;
   --light-mode-color: black;
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  // 32px to rem
-
   --padding-mobile: 2rem;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
@@ -14,15 +17,12 @@
     rgba(254, 127, 45, 1) 5%,
     rgba(95, 153, 136, 1) 100%
   );
-}
-
-* {
-  margin: 0;
-  padding: 0;
+  --bg-image: url("../assets/bg.svg");
 }
 
 body {
-  background: black;
+  background-image: var(--bg-image);
+  background-size: fill;
   height: 100vh;
   color: var(--dark-mode-color);
   scroll-behavior: smooth;
@@ -33,12 +33,7 @@ body {
   }
 }
 
-ul {
-  list-style: none;
-}
-
 a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -65,7 +60,7 @@ img {
   ul {
     flex-direction: column;
     padding: 0;
-
+    text-decoration: none;
     .active {
       font-weight: bold;
       color: #fe7f2d;
@@ -74,7 +69,9 @@ img {
     li {
       display: block;
       padding: 0.5em 0;
-
+      a {
+        text-decoration: none;
+      }
       &:hover {
         text-decoration: underline;
       }
@@ -224,7 +221,7 @@ img {
   .sub-title {
     padding: 1em var(--padding-mobile);
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .details {
@@ -240,6 +237,48 @@ img {
     text-align: left;
     padding: 0 var(--padding-mobile);
     font-weight: normal;
+  }
+}
+
+#contact {
+  padding: var(--padding-mobile);
+  .title {
+    padding: var(--padding-mobile) 0 1em 0;
+    font-size: 20px;
+  }
+
+  ul {
+    padding: 1em var(--padding-mobile) 0 var(--padding-mobile);
+    li {
+      font-size: 0.8125em;
+    }
+  }
+
+  .email {
+    --height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    .mail {
+      height: var(--height);
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      padding: 0 1em;
+      background: #383838;
+    }
+    svg {
+      height: var(--height);
+    }
+  }
+
+  textarea {
+    display: block;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    background: #383838;
   }
 }
 

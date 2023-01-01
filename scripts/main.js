@@ -1,4 +1,4 @@
-function openMenu() {
+function openNav() {
     document.getElementById('nav-bar').style.display = 'block'
     document.getElementById('menu').style.display = 'none'
 }
