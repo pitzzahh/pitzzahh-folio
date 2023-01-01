@@ -9,7 +9,7 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  --padding: 2rem;
+  --padding-left-right: 2rem;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
   --project-gradient: linear-gradient(
@@ -18,6 +18,7 @@
     rgba(95, 153, 136, 1) 100%
   );
   --bg-image: url("../assets/bg.svg");
+  --display: flex;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
   color: var(--dark-mode-color);
   scroll-behavior: smooth;
 }
-body .left-alignment {
+body .sub-topic {
   font-weight: bold;
 }
 
@@ -40,17 +41,43 @@ img {
 }
 
 #nav-bar {
+  padding: 2em var(--padding-left-right);
+}
+#nav-bar div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 2em var(--padding);
+}
+#nav-bar #menu {
+  display: var(--display);
 }
 #nav-bar #close {
   display: none;
 }
-#nav-bar ul {
-  list-style: none;
+#nav-bar #mode-toggle {
+  display: var(--display);
+}
+#nav-bar #nav-links {
   display: none;
+  flex-flow: column;
+  list-style: none;
+  padding-top: var(--padding-left-right);
+  width: 100%;
+}
+#nav-bar #nav-links li {
+  padding: 0.5em 0;
+}
+#nav-bar #nav-links li .current-topic {
+  font-weight: bold;
+  color: #fe7f2d;
+}
+#nav-bar #nav-links li:hover {
+  text-decoration: underline;
+}
+#nav-bar #nav-links a {
+  text-decoration: none;
+}
+#nav-bar #nav-links:active {
+  display: var(--display);
 }
 
 #hero {
@@ -58,13 +85,14 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 1em false;
+  padding: 1em var(--padding-left-right) 0 var(--padding-left-right);
 }
 #hero .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1em var(--padding) 0.5em var(--padding);
+  width: 100%;
+  padding: 2em var(--padding-left-right);
 }
 #hero .info .avatar {
   width: 7.5rem;
@@ -95,7 +123,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 4em 0;
+  margin: 2em 0;
 }
 
 #technologies {
@@ -103,13 +131,13 @@ img {
   flex-direction: column;
 }
 #technologies p {
-  padding: 2em var(--padding);
+  padding: 1em var(--padding-left-right);
   font-size: 20px;
 }
 #technologies div {
   display: grid;
-  padding: 2em calc(var(--padding) * 2);
-  grid-template-columns: auto auto auto auto auto;
+  padding: 2em calc(var(--padding-left-right) * 2);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
 }
@@ -128,7 +156,7 @@ img {
   flex-direction: column;
 }
 #projects p {
-  padding: 2em var(--padding);
+  padding: 2em var(--padding-left-right);
   font-size: 20px;
 }
 #projects .list-projects {
@@ -177,16 +205,16 @@ img {
 }
 
 #about-me .title {
-  padding: 1em var(--padding);
+  padding: 2em var(--padding-left-right);
   font-size: 20px;
 }
 #about-me .sub-title {
-  padding: 1em var(--padding);
+  padding: 1em var(--padding-left-right);
   font-size: 16px;
   font-weight: bold;
 }
 #about-me .details {
-  padding: 0 var(--padding);
+  padding: 0 var(--padding-left-right);
   text-align: right;
   font-size: 0.875em;
 }
@@ -195,19 +223,19 @@ img {
   font-style: light;
   margin-bottom: 0.78125em;
   text-align: left;
-  padding: 0 var(--padding);
+  padding: 0 var(--padding-left-right);
   font-weight: normal;
 }
 
 #contact {
-  padding: 0.5em var(--padding);
+  padding: 0.5em var(--padding-left-right);
 }
 #contact .title {
   padding: 1em 0;
   font-size: 20px;
 }
 #contact ul {
-  padding: 1em var(--padding) 0 var(--padding);
+  padding: 1em var(--padding-left-right) 0 var(--padding-left-right);
 }
 #contact ul li {
   font-size: 0.8125em;
@@ -226,6 +254,7 @@ img {
   border-radius: 10px;
   padding: 0 1em;
   background: #383838;
+  color: var(--dark-mode-color);
 }
 #contact .email svg {
   height: var(--height);
@@ -242,6 +271,7 @@ img {
   border: none;
   border-radius: 10px;
   background: #383838;
+  color: var(--dark-mode-color);
 }
 
 footer {
@@ -259,33 +289,46 @@ footer p span {
   color: #d33432;
 }
 
-@media only screen and (min-width: 500px) {
-  #menu {
-    display: none;
+@media only screen and (min-width: 550px) {
+  #hero {
+    padding: 0 var(--padding-left-right) 0 var(--padding-left-right);
+  }
+  #hero #info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
   }
   #nav-bar {
     display: flex;
-    position: static;
-    align-self: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    background: transparent;
+    align-items: center;
   }
-  #nav-bar ul {
-    display: flex;
-    flex-direction: row;
-  }
-  #nav-bar ul li {
-    padding: 0 1em;
-  }
-  #nav-bar #close {
+  #nav-bar #menu {
     display: none;
   }
-}
-@media only screen and (min-width: 700px) {
-  :root {
-    --padding: 12rem;
+  #nav-bar #nav-links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
   }
-  #info {
-    flex-direction: column-reverse;
+  #nav-bar #nav-links li {
+    padding: 0px 1em;
+  }
+}
+@media only screen and (min-width: 750px) {
+  :root {
+    --padding-left-right: 6rem;
+  }
+}
+@media only screen and (min-width: 850px) {
+  :root {
+    --padding-left-right: 10rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  :root {
+    --padding-left-right: 20rem;
   }
 }/*# sourceMappingURL=main.css.map */

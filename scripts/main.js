@@ -1,9 +1,10 @@
-function openNav() {
-    document.getElementById('nav-bar').style.display = 'block'
-    document.getElementById('menu').style.display = 'none'
-}
+const menuButton = document.getElementById('menu')
+const closeButton = document.getElementById('close')
+const modeToggle = document.getElementById('mode-toggle')
+const navBar = document.getElementById('nav-bar')
+const navLinks = document.getElementById('nav-links')
 
-function closeNav() {
-    document.getElementById('menu').style.display = 'flex'
-    document.getElementById('nav-bar').style.display = 'none'
-}
+menuButton.addEventListener('click', () => {
+    console.log('menu clicked')
+    navLinks.classList.toggle('active')
+})

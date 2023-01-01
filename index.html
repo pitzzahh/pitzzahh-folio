@@ -18,78 +18,80 @@
     <header>
       <!-- Menu -->
       <nav id="nav-bar">
-        <svg
-        id="menu"
-        onclick="openNav()"
-        class="toggle-button"
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3.75 11.25H26.25"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M3.75 19.25H26.25"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-        <svg
-          id="close"
-          onclick="closeNav()"
-          viewBox="0 0 30 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M22.5 7.5L7.5 22.5"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M7.5 7.5L22.5 22.5"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <ul>
-          <li><a href="#" class="active">Home</a></li>
+        <div>
+          <svg
+            id="menu"
+            class="toggle-button"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 11.25H26.25"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.75 19.25H26.25"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            id="close"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.5 7.5L7.5 22.5"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M7.5 7.5L22.5 22.5"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <!-- Toggle Dark Mode -->
+          <svg
+            id="mode-toggle"
+            class="toggle-button"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="30" height="30" rx="10" fill="#808080" />
+            <path
+              d="M14.6154 7.5V8.33333M14.6154 21.6667V22.5M22.3077 15H21.453M7.7778 15H6.9231M20.0547 20.3033L19.4504 19.7142M9.78036 10.2858L9.17609 9.69667M20.0547 9.69667L19.4504 10.2858M9.78036 19.7142L9.17609 20.3033M18.0342 15C18.0342 15.8841 17.674 16.7319 17.0329 17.357C16.3917 17.9821 15.5221 18.3333 14.6154 18.3333C13.7087 18.3333 12.8391 17.9821 12.1979 17.357C11.5568 16.7319 11.1966 15.8841 11.1966 15C11.1966 14.1159 11.5568 13.2681 12.1979 12.643C12.8391 12.0179 13.7087 11.6667 14.6154 11.6667C15.5221 11.6667 16.3917 12.0179 17.0329 12.643C17.674 13.2681 18.0342 14.1159 18.0342 15V15Z"
+              stroke="#EDE3E3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <ul id="nav-links">
+          <li><a href="#" class="current-topic">Home</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">About Me</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <!-- Toggle Dark Mode -->
-        <svg
-          id="mode-toggle"
-          class="toggle-button"
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="30" height="30" rx="10" fill="#808080" />
-          <path
-            d="M14.6154 7.5V8.33333M14.6154 21.6667V22.5M22.3077 15H21.453M7.7778 15H6.9231M20.0547 20.3033L19.4504 19.7142M9.78036 10.2858L9.17609 9.69667M20.0547 9.69667L19.4504 10.2858M9.78036 19.7142L9.17609 20.3033M18.0342 15C18.0342 15.8841 17.674 16.7319 17.0329 17.357C16.3917 17.9821 15.5221 18.3333 14.6154 18.3333C13.7087 18.3333 12.8391 17.9821 12.1979 17.357C11.5568 16.7319 11.1966 15.8841 11.1966 15C11.1966 14.1159 11.5568 13.2681 12.1979 12.643C12.8391 12.0179 13.7087 11.6667 14.6154 11.6667C15.5221 11.6667 16.3917 12.0179 17.0329 12.643C17.674 13.2681 18.0342 14.1159 18.0342 15V15Z"
-            stroke="#EDE3E3"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
       </nav>
     </header>
     <!-- Add toggle button for dark mode and light mode-->
@@ -102,14 +104,16 @@
             alt="A picture of the owner of this webiste"
             class="avatar"
           />
-          <p id="main-info">
-            Hello&#128075;, I&apos;m <span id="my-name">Peter John</span> you
-            can call me
-            <span id="my-cs">pitzzahh</span>
-          </p>
-          <p id="sub-info">
-            Software developer, embracing web development, and UI/UX design.
-          </p>
+          <div>
+            <p id="main-info">
+              Hello&#128075;, I&apos;m <span id="my-name">Peter John</span> you
+              can call me
+              <span id="my-cs">pitzzahh</span>
+            </p>
+            <p id="sub-topic">
+              Software developer, embracing web development, and UI/UX design.
+            </p>
+          </div>
         </div>
 
         <div class="call-to-action">
@@ -158,7 +162,7 @@
       </section>
 
       <section id="technologies">
-        <p class="left-alignment">Technologies</p>
+        <p class="sub-topic">Technologies</p>
         <div>
           <img
             class="normal"
@@ -219,7 +223,7 @@
       </section>
 
       <section id="projects">
-        <p class="left-alignment">Projects</p>
+        <p class="sub-topic">Projects</p>
         <div class="list-projects">
           <div id="projects-first-column">
             <div class="project">
@@ -398,7 +402,7 @@
       </section>
 
       <section id="about-me">
-        <p class="title left-alignment">About Me</p>
+        <p class="title sub-topic">About Me</p>
         <div>
           <p class="details">
             I&apos;m Peter John Arao, a self-taught software developer. I
@@ -418,7 +422,7 @@
       </section>
 
       <section id="contact">
-        <p class="title left-alignment">Contact</p>
+        <p class="title sub-topic">Contact</p>
         <div class="socials">
           <p class="sub-title">Social Links</p>
           <ul>
