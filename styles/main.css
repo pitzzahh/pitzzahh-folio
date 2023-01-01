@@ -4,10 +4,14 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  --left-padding-mobile: 2rem;
+  --padding-mobile: 2rem;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
-  --project-gradient: linear-gradient(to right, rgba(254,127,45,1) 5%, rgba(95,153,136,1) 100%);
+  --project-gradient: linear-gradient(
+    to right,
+    rgba(254, 127, 45, 1) 5%,
+    rgba(95, 153, 136, 1) 100%
+  );
 }
 
 * {
@@ -22,7 +26,7 @@ body {
   scroll-behavior: smooth;
 }
 body .left-alignment {
-  padding-left: var(--left-padding-mobile);
+  padding-left: var(--padding-mobile);
   font-weight: bold;
 }
 
@@ -39,39 +43,40 @@ img {
   width: 100%;
 }
 
-#nav-bar {
+#menu {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-#nav-bar .toggle-button {
   width: 30px;
   height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: none;
   border: none;
-  margin: 2.5em;
+  margin: var(--padding-mobile);
+}
+
+#nav-bar {
+  display: none;
+  position: absolute;
+  padding: var(--padding-mobile);
+  background-color: #0D0D0D;
+  width: 100%;
+  height: 100%;
 }
 #nav-bar ul {
-  display: none;
   flex-direction: column;
-  padding: 1em 1em;
+  padding: 0;
 }
 #nav-bar ul .active {
-  color: #fe7f2d;
   font-weight: bold;
+  color: #fe7f2d;
 }
 #nav-bar ul li {
+  display: block;
   padding: 0.5em 0;
 }
 #nav-bar ul li:hover {
   text-decoration: underline;
 }
-#nav-bar ul hr {
-  width: 100%;
-  border: 1px solid #a1c181;
+#nav-bar #close {
+  width: 30px;
 }
 
 #hero {
@@ -82,7 +87,7 @@ img {
 #hero .info {
   display: flex;
   flex-direction: column;
-  padding: var(--left-padding-mobile);
+  padding: var(--padding-mobile);
 }
 #hero .info .avatar {
   width: 7.5rem;
@@ -141,7 +146,7 @@ img {
   flex-direction: column;
 }
 #projects p {
-  padding: 2em var(--left-padding-mobile);
+  padding: 2em var(--padding-mobile);
   font-size: 20px;
 }
 #projects .list-projects {
@@ -185,20 +190,20 @@ img {
 }
 #projects .list-projects .project .details ul li {
   font-size: 8px;
-  padding: 0px 0.5em;
+  padding: 0px 0.2em;
 }
 
 #about-me .title {
-  padding: 1em var(--left-padding-mobile);
+  padding: 1em var(--padding-mobile);
   font-size: 20px;
 }
 #about-me .sub-title {
-  padding: 1em var(--left-padding-mobile);
+  padding: 1em var(--padding-mobile);
   font-size: 16px;
   font-weight: normal;
 }
 #about-me .details {
-  padding: 0 var(--left-padding-mobile);
+  padding: 0 var(--padding-mobile);
   text-align: right;
   font-size: 0.875em;
 }
@@ -207,7 +212,7 @@ img {
   font-style: light;
   margin-bottom: 0.78125em;
   text-align: left;
-  padding: 0 var(--left-padding-mobile);
+  padding: 0 var(--padding-mobile);
   font-weight: normal;
 }
 
