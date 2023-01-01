@@ -184,6 +184,7 @@ img {
   height: 15px;
 }
 #projects .list-projects .project .details ul {
+  list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
