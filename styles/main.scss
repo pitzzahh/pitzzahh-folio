@@ -9,7 +9,7 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  --padding: 2rem;
+  --padding-left-right: 2rem;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
   --project-gradient: linear-gradient(
@@ -43,7 +43,7 @@ img {
 }
 
 #nav-bar {
-  padding: 2em var(--padding);
+  padding: 2em var(--padding-left-right);
 
   div {
     display: flex;
@@ -72,7 +72,7 @@ img {
     display: none;
     flex-flow: column;
     list-style: none;
-    padding-top: var(--padding);
+    padding-top: var(--padding-left-right);
     width: 100%;
 
     li {
@@ -101,13 +101,13 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em var(--padding) 0 var(--padding);
+  padding: 1em var(--padding-left-right) 0 var(--padding-left-right);
   .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: var(--padding);
+    padding: 2em var(--padding-left-right);
     .avatar {
       width: 7.5rem;
       border-radius: 50%;
@@ -151,13 +151,13 @@ img {
   display: flex;
   flex-direction: column;
   p {
-    padding: 1em var(--padding);
+    padding: 1em var(--padding-left-right);
     font-size: 20px;
   }
 
   div {
     display: grid;
-    padding: 2em calc(var(--padding) * 2);
+    padding: 2em calc(var(--padding-left-right) * 2);
     grid-template-columns: auto auto auto auto auto;
     align-items: center;
     justify-items: center;
@@ -179,8 +179,9 @@ img {
 #projects {
   display: flex;
   flex-direction: column;
+
   p {
-    padding: 2em var(--padding);
+    padding: 2em var(--padding-left-right);
     font-size: 20px;
   }
 
@@ -188,6 +189,7 @@ img {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
+
     .project {
       display: grid;
       grid-template-rows: auto auto;
@@ -235,18 +237,18 @@ img {
 
 #about-me {
   .title {
-    padding: 2em var(--padding);
+    padding: 2em var(--padding-left-right);
     font-size: 20px;
   }
 
   .sub-title {
-    padding: 1em var(--padding);
+    padding: 1em var(--padding-left-right);
     font-size: 16px;
     font-weight: bold;
   }
 
   .details {
-    padding: 0 var(--padding);
+    padding: 0 var(--padding-left-right);
     text-align: right;
     font-size: 0.875em;
   }
@@ -256,20 +258,20 @@ img {
     font-style: light;
     margin-bottom: 0.78125em;
     text-align: left;
-    padding: 0 var(--padding);
+    padding: 0 var(--padding-left-right);
     font-weight: normal;
   }
 }
 
 #contact {
-  padding: 0.5em var(--padding);
+  padding: 0.5em var(--padding-left-right);
   .title {
     padding: 1em 0;
     font-size: 20px;
   }
 
   ul {
-    padding: 1em var(--padding) 0 var(--padding);
+    padding: 1em var(--padding-left-right) 0 var(--padding-left-right);
     li {
       font-size: 0.8125em;
     }
@@ -325,6 +327,18 @@ footer {
 }
 
 @media only screen and (min-width: 550px) {
+
+  #hero {
+    padding: 0 var(--padding-left-right) 0 var(--padding-left-right);
+    #info {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+
   #nav-bar {
     display: flex;
     flex-direction: row-reverse;
@@ -348,6 +362,6 @@ footer {
 
 @media only screen and (min-width: 750px) {
   :root {
-    --padding: 12rem;
+    --padding-left-right: 12rem;
   }
 }
