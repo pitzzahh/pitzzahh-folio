@@ -28,7 +28,6 @@ body {
   scroll-behavior: smooth;
 }
 body .left-alignment {
-  padding-left: var(--padding-mobile);
   font-weight: bold;
 }
 
@@ -40,7 +39,7 @@ img {
   width: 100%;
 }
 
-#menu {
+header {
   display: flex;
   width: 30px;
   height: 30px;
@@ -61,6 +60,7 @@ img {
   flex-direction: column;
   padding: 0;
   text-decoration: none;
+  justify-content: center;
 }
 #nav-bar ul .active {
   font-weight: bold;
@@ -68,7 +68,8 @@ img {
 }
 #nav-bar ul li {
   display: block;
-  padding: 0.5em 0;
+  text-align: center;
+  padding: 0;
 }
 #nav-bar ul li a {
   text-decoration: none;
@@ -83,12 +84,15 @@ img {
 #hero {
   display: flex;
   flex-direction: column;
-  padding-top: 1em;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em false;
 }
 #hero .info {
   display: flex;
   flex-direction: column;
-  padding: var(--padding-mobile);
+  justify-content: center;
+  padding: 1em var(--padding-mobile) 0.5em var(--padding-mobile);
 }
 #hero .info .avatar {
   width: 7.5rem;
@@ -121,24 +125,29 @@ img {
   padding: 0;
   margin: 4em 0;
 }
-#hero .technologies p {
-  display: block;
-  font-size: 1.25em;
+
+#technologies {
+  display: flex;
+  flex-direction: column;
 }
-#hero .technologies div {
+#technologies p {
+  padding: 2em var(--padding-mobile);
+  font-size: 20px;
+}
+#technologies div {
   display: grid;
-  padding: 2em 3.5em;
+  padding: 2em calc(var(--padding-mobile) * 1.5);
   grid-template-columns: auto auto auto auto auto;
   align-items: center;
   justify-items: center;
 }
-#hero .technologies div img {
+#technologies div img {
   padding: 0.1em;
 }
-#hero .technologies div .normal {
+#technologies div .normal {
   width: 40px;
 }
-#hero .technologies div .custom {
+#technologies div .custom {
   width: 28px;
 }
 
@@ -222,7 +231,7 @@ img {
   padding: 0.5em var(--padding-mobile);
 }
 #contact .title {
-  padding: var(--padding-mobile) 0 1em 0;
+  padding: 1em 0;
   font-size: 20px;
 }
 #contact ul {
@@ -285,6 +294,8 @@ footer p span {
   #nav-bar {
     display: flex;
     position: static;
+    align-self: center;
+    justify-content: space-between;
     background: transparent;
   }
   #nav-bar ul {
@@ -292,9 +303,17 @@ footer p span {
     flex-direction: row;
   }
   #nav-bar ul li {
-    padding: 1em;
+    padding: 0 1em;
   }
   #nav-bar #close {
     display: none;
+  }
+}
+@media only screen and (min-width: 700px) {
+  :root {
+    --padding-mobile: 12rem;
+  }
+  #info {
+    flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=main.css.map */

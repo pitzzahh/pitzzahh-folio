@@ -28,7 +28,7 @@ body {
   scroll-behavior: smooth;
 
   .left-alignment {
-    padding-left: var(--padding-mobile);
+    // padding-left: var(--padding-mobile);
     font-weight: bold;
   }
 }
@@ -41,7 +41,7 @@ img {
   width: 100%;
 }
 
-#menu {
+header {
   display: flex;
   width: 30px;
   height: 30px;
@@ -49,6 +49,7 @@ img {
   border: none;
   margin: var(--padding-mobile);
 }
+
 
 #nav-bar {
   display: none;
@@ -61,6 +62,7 @@ img {
     flex-direction: column;
     padding: 0;
     text-decoration: none;
+    justify-content: center;
     .active {
       font-weight: bold;
       color: #fe7f2d;
@@ -68,7 +70,8 @@ img {
 
     li {
       display: block;
-      padding: 0.5em 0;
+      text-align: center;
+      padding: 0;
       a {
         text-decoration: none;
       }
@@ -86,11 +89,14 @@ img {
 #hero {
   display: flex;
   flex-direction: column;
-  padding-top: 1em;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em variable-exists($name: --padding-mobile);
   .info {
     display: flex;
     flex-direction: column;
-    padding: var(--padding-mobile);
+    justify-content: center;
+    padding: 1em var(--padding-mobile) .5em var(--padding-mobile);
     .avatar {
       width: 7.5rem;
       border-radius: 50%;
@@ -113,7 +119,6 @@ img {
     }
 
     #sub-info {
-      // convert px to em unit
       list-style: 1.5em;
       font-size: 12px;
       font-style: normal;
@@ -130,29 +135,32 @@ img {
     margin: 4em 0;
   }
 
-  .technologies {
-    p {
-      display: block;
-      font-size: 1.25em;
+}
+
+#technologies {
+  display: flex;
+  flex-direction: column;
+  p {
+    padding: 2em var(--padding-mobile);
+    font-size: 20px;
+  }
+  div {
+    display: grid;
+    padding: 2em calc(var(--padding-mobile) * 1.5);
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+
+    img {
+      padding: 0.1em;
     }
-    div {
-      display: grid;
-      padding: 2em 3.5em;
-      grid-template-columns: auto auto auto auto auto;
-      align-items: center;
-      justify-items: center;
 
-      img {
-        padding: 0.1em;
-      }
+    .normal {
+      width: 40px;
+    }
 
-      .normal {
-        width: 40px;
-      }
-
-      .custom {
-        width: 28px;
-      }
+    .custom {
+      width: 28px;
     }
   }
 }
@@ -245,7 +253,7 @@ img {
 #contact {
   padding: 0.5em var(--padding-mobile);
   .title {
-    padding: var(--padding-mobile) 0 1em 0;
+    padding: 1em 0;
     font-size: 20px;
   }
 
@@ -313,17 +321,28 @@ footer {
   #nav-bar {
     display: flex;
     position: static;
+    align-self: center;
+    justify-content: space-between;
     background: transparent;
     ul {
       display: flex;
       flex-direction: row;
       li {
-        padding: 1em;
+        padding: 0 1em;
       }
     }
 
     #close {
       display: none;
     }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  :root {
+    --padding-mobile: 12rem;
+  }
+  #info {
+    flex-direction: column-reverse;
   }
 }
