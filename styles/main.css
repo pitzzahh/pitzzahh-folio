@@ -219,7 +219,7 @@ img {
 }
 
 #contact {
-  padding: var(--padding-mobile);
+  padding: 0.5em var(--padding-mobile);
 }
 #contact .title {
   padding: var(--padding-mobile) 0 1em 0;
