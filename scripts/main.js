@@ -1,11 +1,10 @@
-const menu = document.getElementById('menu')
-const close = document.getElementById('close')
+const menuButton = document.getElementById('menu')
+const closeButton = document.getElementById('close')
 const modeToggle = document.getElementById('mode-toggle')
 const navBar = document.getElementById('nav-bar')
 const navLinks = document.getElementById('nav-links')
 
-menu.addEventListener('click', () => {
-    menu.classList.toggle('active')
-    close.classList.toggle('active')
+menuButton.addEventListener('click', () => {
+    console.log('menu clicked')
     navLinks.classList.toggle('active')
 })

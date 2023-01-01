@@ -28,8 +28,7 @@ body {
   color: var(--dark-mode-color);
   scroll-behavior: smooth;
 
-  .left-alignment {
-    // padding-left: var(--padding-mobile);
+  .sub-topic {
     font-weight: bold;
   }
 }
@@ -52,16 +51,10 @@ img {
 
   #menu {
     display: var(--display);
-    &:active {
-      display: none;
-    }
   }
 
   #close {
     display: none;
-    &:active {
-      display: var(--display);
-    }
   }
 
   #mode-toggle {
@@ -77,10 +70,12 @@ img {
 
     li {
       padding: 0.5em 0;
-      .active {
+
+      .current-topic {
         font-weight: bold;
         color: #fe7f2d;
       }
+
       &:hover {
         text-decoration: underline;
       }
@@ -93,6 +88,7 @@ img {
     &:active {
       display: var(--display);
     }
+
   }
 }
 
@@ -158,7 +154,7 @@ img {
   div {
     display: grid;
     padding: 2em calc(var(--padding-left-right) * 2);
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
 
@@ -290,6 +286,7 @@ img {
       border-radius: 10px;
       padding: 0 1em;
       background: #383838;
+      color: var(--dark-mode-color);
     }
     svg {
       height: var(--height);
@@ -307,6 +304,7 @@ img {
       border: none;
       border-radius: 10px;
       background: #383838;
+      color: var(--dark-mode-color);
     }
   }
 }
@@ -362,6 +360,18 @@ footer {
 
 @media only screen and (min-width: 750px) {
   :root {
-    --padding-left-right: 12rem;
+    --padding-left-right: 6rem;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  :root {
+    --padding-left-right: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    --padding-left-right: 20rem;
   }
 }

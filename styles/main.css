@@ -28,7 +28,7 @@ body {
   color: var(--dark-mode-color);
   scroll-behavior: smooth;
 }
-body .left-alignment {
+body .sub-topic {
   font-weight: bold;
 }
 
@@ -50,14 +50,8 @@ img {
 #nav-bar #menu {
   display: var(--display);
 }
-#nav-bar #menu:active {
-  display: none;
-}
 #nav-bar #close {
   display: none;
-}
-#nav-bar #close:active {
-  display: var(--display);
 }
 #nav-bar #mode-toggle {
   display: var(--display);
@@ -72,7 +66,7 @@ img {
 #nav-bar #nav-links li {
   padding: 0.5em 0;
 }
-#nav-bar #nav-links li .active {
+#nav-bar #nav-links li .current-topic {
   font-weight: bold;
   color: #fe7f2d;
 }
@@ -143,7 +137,7 @@ img {
 #technologies div {
   display: grid;
   padding: 2em calc(var(--padding-left-right) * 2);
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
 }
@@ -260,6 +254,7 @@ img {
   border-radius: 10px;
   padding: 0 1em;
   background: #383838;
+  color: var(--dark-mode-color);
 }
 #contact .email svg {
   height: var(--height);
@@ -276,6 +271,7 @@ img {
   border: none;
   border-radius: 10px;
   background: #383838;
+  color: var(--dark-mode-color);
 }
 
 footer {
@@ -323,6 +319,16 @@ footer p span {
 }
 @media only screen and (min-width: 750px) {
   :root {
-    --padding-left-right: 12rem;
+    --padding-left-right: 6rem;
+  }
+}
+@media only screen and (min-width: 850px) {
+  :root {
+    --padding-left-right: 10rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  :root {
+    --padding-left-right: 20rem;
   }
 }/*# sourceMappingURL=main.css.map */
