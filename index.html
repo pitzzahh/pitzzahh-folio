@@ -71,8 +71,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        </button>
-        
+
         <!-- Toggle Dark Mode -->
         <svg
           id="mode-toggle"
@@ -91,7 +90,6 @@
             stroke-linejoin="round"
           />
         </svg>
-        </button>
       </div>
       <nav id="nav-bar">
         <ul id="nav-links">
@@ -124,14 +122,17 @@
         </div>
 
         <div class="call-to-action">
-          <svg
-            width="24"
-            height="57"
-            viewBox="0 0 24 57"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="12" cy="14" r="7" fill="url(#paint0_linear_167_690)" />
+          <svg width="24" height="57" viewBox="0 0 24 57" fill="none">
+            <circle cx="12" cy="14" r="7" fill="url(#paint0_linear_167_690)">
+              <animate
+                attributeName="cy"
+                values="14; 40; 14"
+                keyTimes="0; 0.5; 1"
+                keySplines=".5 0 .5 1; .5 0 .5 1"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+            </circle>
             <rect
               x="0.5"
               y="0.5"
