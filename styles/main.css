@@ -306,22 +306,23 @@ footer p span {
     align-items: center;
     padding: 0;
   }
-  #nav-bar {
+  header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    padding: 2em var(--padding-left-right);
   }
-  #nav-bar #menu-button {
+  header div #menu-button, header div #close {
     display: none;
   }
-  #nav-bar #nav-links {
+  header #nav-links {
     display: flex;
     flex-direction: row;
     padding: 0;
   }
-  #nav-bar #nav-links li {
-    padding: 0px 1em;
+  header #nav-links li {
+    padding: 0px 1em 0 0;
   }
 }
 @media only screen and (min-width: 750px) {

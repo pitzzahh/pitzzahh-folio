@@ -344,26 +344,28 @@ footer {
     }
   }
 
-
-  #nav-bar {
+  header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    #menu-button {
-      display: none;
+    padding: 2em var(--padding-left-right);
+    div {
+      #menu-button, #close {
+        display: none;
+      }
     }
 
     #nav-links {
       display: flex;
       flex-direction: row;
       padding: 0;
-
       li {
-        padding: 0px 1em;
+        padding: 0px 1em 0 0;
       }
     }
   }
+
 }
 
 @media only screen and (min-width: 750px) {
