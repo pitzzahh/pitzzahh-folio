@@ -48,12 +48,6 @@ header div {
   justify-content: space-between;
   align-items: center;
 }
-header div button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
 header div #menu-button {
   display: var(--display);
 }
@@ -312,6 +306,12 @@ footer p span {
     justify-content: space-between;
     align-items: center;
     padding: 2em var(--padding-left-right);
+  }
+  header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   header div #menu-button, header div #close {
     display: none;

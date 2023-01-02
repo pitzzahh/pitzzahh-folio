@@ -3,7 +3,6 @@ function openNav() {
     document.getElementById("close").style.display = "flex";
     document.getElementById("nav-links").style.display = "flex";
     document.querySelector('header').style.background = "#050505";
-    document.querySelector('header').style.height = "100vh";
 }
 
 function closeNav() {
@@ -11,5 +10,18 @@ function closeNav() {
     document.getElementById("close").style.display = "none";
     document.getElementById("nav-links").style.display = "none";
     document.querySelector('header').style.background = "none";
-    document.querySelector('header').style.height = "0";
+}
+
+window.addEventListener('resize', checkDeviceWidth);
+
+function checkDeviceWidth() {
+    if (window.matchMedia("(min-width: 550px)").matches) {
+        document.getElementById("close").style.display = "none";
+        document.getElementById("menu-button").style.display = "none";
+        document.getElementById("nav-links").style.display = "flex";
+    } else {
+        document.getElementById("menu-button").style.display = "flex";
+        document.getElementById("nav-links").style.display = "none";
+        document.querySelector('header').style.background = "none";
+    }
 }

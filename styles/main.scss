@@ -40,19 +40,14 @@ a {
 img {
   width: 100%;
 }
+
 header {
   padding: 2em var(--padding-left-right);
+
   div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      outline: none;
-    }
 
     #menu-button {
       display: var(--display);
@@ -351,6 +346,10 @@ footer {
     align-items: center;
     padding: 2em var(--padding-left-right);
     div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
       #menu-button, #close {
         display: none;
       }
@@ -372,7 +371,6 @@ footer {
   :root {
     --padding-left-right: 6rem;
   }
-
 }
 
 @media only screen and (min-width: 800px) {
