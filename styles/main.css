@@ -55,6 +55,7 @@ header div #close {
   display: none;
 }
 header div #mode-toggle {
+  cursor: pointer;
   display: var(--display);
 }
 header #nav-links {
@@ -66,16 +67,27 @@ header #nav-links {
 }
 header #nav-links li {
   padding: 0.5em 0;
+  cursor: default;
 }
-header #nav-links li .current-topic {
+header #nav-links li .current-page {
   font-weight: bold;
   color: #fe7f2d;
 }
-header #nav-links li:hover {
-  text-decoration: underline;
-}
 header #nav-links a {
-  text-decoration: none;
+  position: relative;
+}
+header #nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+  background-color: var(--dark-mode-color);
+  height: 0.125em;
+}
+header #nav-links a:hover::before {
+  width: 100%;
 }
 
 #hero {
@@ -111,7 +123,7 @@ header #nav-links a {
 }
 #hero .info #sub-info {
   list-style: 1.5em;
-  font-size: 12px;
+  font-size: 0.75em;
   font-style: normal;
   letter-spacing: 7.5%;
   text-transform: uppercase;
@@ -133,7 +145,7 @@ header #nav-links a {
   display: flex;
   justify-content: flex-start;
   padding: 1em var(--padding-left-right);
-  font-size: 20px;
+  font-size: 1.25em;
 }
 #technologies div {
   display: grid;
@@ -146,10 +158,10 @@ header #nav-links a {
   padding: 0.1em;
 }
 #technologies div .normal {
-  width: 40px;
+  width: 2.5em;
 }
 #technologies div .custom {
-  width: 28px;
+  width: 1.75em;
 }
 
 #projects {
@@ -158,7 +170,7 @@ header #nav-links a {
 }
 #projects p {
   padding: 2em var(--padding-left-right);
-  font-size: 20px;
+  font-size: 1.25em;
 }
 #projects .list-projects {
   display: grid;
@@ -171,15 +183,15 @@ header #nav-links a {
   width: var(--project-width-mobile);
   height: var(--project-height-mobile);
   background: var(--project-gradient);
-  border-radius: 50em;
-  border-radius: 15px;
+  border-radius: 3.125em;
+  border-radius: 0.9375em;
   margin: 0.2em;
 }
 #projects .list-projects .project p {
   display: flex;
   align-items: flex-end;
   justify-self: center;
-  font-size: 12px;
+  font-size: 0.75em;
   padding: 0;
   grid-row: span 8;
 }
@@ -190,8 +202,8 @@ header #nav-links a {
   padding: 0.5em;
 }
 #projects .list-projects .project .details img {
-  width: 15px;
-  height: 15px;
+  width: 0.9375em;
+  height: 0.9375em;
 }
 #projects .list-projects .project .details ul {
   list-style: none;
@@ -201,17 +213,17 @@ header #nav-links a {
   padding: 0;
 }
 #projects .list-projects .project .details ul li {
-  font-size: 8px;
-  padding: 0px 0.2em;
+  font-size: 0.5em;
+  padding: 0 0.2em;
 }
 
 #about-me .title {
   padding: 2em var(--padding-left-right);
-  font-size: 20px;
+  font-size: 1.25em;
 }
 #about-me .sub-title {
   padding: 1em var(--padding-left-right);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
 }
 #about-me .details {
@@ -252,7 +264,7 @@ header #nav-links a {
   height: var(--height);
   width: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625em;
   padding: 0 1em;
   background: #383838;
   color: var(--dark-mode-color);
@@ -270,7 +282,7 @@ header #nav-links a {
   padding: 1em;
   width: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625em;
   background: #383838;
   color: var(--dark-mode-color);
 }
@@ -284,7 +296,7 @@ footer {
   padding-bottom: 1em;
 }
 footer p {
-  font-size: 12px;
+  font-size: 0.75em;
 }
 footer p span {
   color: #d33432;
@@ -313,7 +325,8 @@ footer p span {
     justify-content: space-between;
     align-items: center;
   }
-  header div #menu-button, header div #close {
+  header div #menu-button,
+header div #close {
     display: none;
   }
   header #nav-links {
@@ -322,7 +335,7 @@ footer p span {
     padding: 0;
   }
   header #nav-links li {
-    padding: 0px 1em 0 0;
+    padding: 0 1em 0 0;
   }
 }
 @media only screen and (min-width: 750px) {
@@ -345,6 +358,8 @@ footer p span {
   }
   #technologies div {
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.5em var(--padding-left-right) 1em var(--padding-left-right);
   }
   #technologies div img {
@@ -359,12 +374,14 @@ footer p span {
     justify-content: center;
     align-items: center;
   }
-  #projects .list-projects #projects-first-column, #projects .list-projects #projects-second-column {
+  #projects .list-projects #projects-first-column,
+#projects .list-projects #projects-second-column {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #projects .list-projects #projects-first-column .project, #projects .list-projects #projects-second-column .project {
+  #projects .list-projects #projects-first-column .project,
+#projects .list-projects #projects-second-column .project {
     width: 120px;
     height: 80px;
   }
@@ -372,5 +389,21 @@ footer p span {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
+  }
+}
+@-webkit-keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

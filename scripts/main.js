@@ -1,3 +1,29 @@
+const home = document.getElementById('home-page')
+const projects = document.getElementById('projects-page')
+const aboutMe = document.getElementById('about-page')
+const contact = document.getElementById('contact-page')
+
+home.addEventListener('click', () => {
+    const element = document.querySelector('body')
+    element.scrollIntoView()
+})
+
+projects.addEventListener('click', () => {
+  const element = document.getElementById('projects')
+  element.scrollIntoView()
+})
+
+aboutMe.addEventListener('click', () => {
+    const element = document.getElementById('about-me')
+    element.scrollIntoView()
+})
+
+contact.addEventListener('click', () => {
+    const element = document.getElementById('contact')
+    element.scrollIntoView()
+})
+
+
 function openNav() {
     document.getElementById("menu-button").style.display = "none";
     document.getElementById("close").style.display = "flex";
