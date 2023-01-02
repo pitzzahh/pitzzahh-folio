@@ -9,7 +9,7 @@
   --dark-mode-color: white;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
-  --padding-left-right: 2rem;
+  --padding-left-right: 2em;
   --project-width-mobile: 8.75em;
   --project-height-mobile: 4.6875em;
   --project-gradient: linear-gradient(
@@ -49,7 +49,7 @@ img {
     justify-content: space-between;
   }
 
-  #menu {
+  #menu-button {
     display: var(--display);
   }
 
@@ -146,7 +146,10 @@ img {
 #technologies {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   p {
+    display: flex;
+    justify-content: flex-start;
     padding: 1em var(--padding-left-right);
     font-size: 20px;
   }
@@ -209,12 +212,19 @@ img {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        // set padding for left and bottom to 0.5em using shorthand
         padding: 0.5em;
-        img {
-          width: 15px;
-          height: 15px;
+        a {
+          img {
+            width: 15px;
+            height: 15px;
+          }
+          &:hover {
+            ::-ms-tooltip {
+              content: 'Visit the project';
+            }
+          }
         }
+
         ul {
           list-style: none;
           display: flex;
@@ -226,6 +236,7 @@ img {
             padding: 0px 0.2em;
           }
         }
+
       }
     }
   }
@@ -263,18 +274,18 @@ img {
   padding: 0.5em var(--padding-left-right);
   .title {
     padding: 1em 0;
-    font-size: 20px;
+    font-size: 1.25em;
   }
 
   ul {
-    padding: 1em var(--padding-left-right) 0 var(--padding-left-right);
+    padding: 1em 2em;
     li {
       font-size: 0.8125em;
     }
   }
 
   .email {
-    --height: 35px;
+    --height: 2.1875em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -342,7 +353,7 @@ footer {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    #menu {
+    #menu-button {
       display: none;
     }
 
@@ -362,16 +373,37 @@ footer {
   :root {
     --padding-left-right: 6rem;
   }
+
+  #projects {
+    display: flex;
+    .list-projects {
+      grid-template-columns: auto auto auto auto;
+      justify-content: center;
+ 
+    }
+  }
+
 }
 
 @media only screen and (min-width: 850px) {
   :root {
     --padding-left-right: 10rem;
   }
+
+  #technologies {
+    div {
+      display: flex;
+      padding: .5em var(--padding-left-right) 1em var(--padding-left-right);
+      img {
+        padding: 0 .2em;
+      }
+    }
+  }
+
 }
 
 @media only screen and (min-width: 1000px) {
   :root {
-    --padding-left-right: 20rem;
+    --padding-left-right: 18rem;
   }
 }
