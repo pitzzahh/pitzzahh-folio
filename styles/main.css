@@ -6,7 +6,7 @@
 :root {
   font-family: "Inter", "Arial", "Consolas", sans-serif;
   --light-mode-color: black;
-  --dark-mode-color: white;
+  --dark-mode-color: #F1F0EE;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
   --padding-left-right: 2em;
@@ -86,7 +86,7 @@ header #nav-links a::before {
   background-color: var(--dark-mode-color);
   height: 0.125em;
 }
-header #nav-links a:hover::before {
+header #nav-links a:hover::before, header #nav-links a:active::before {
   width: 100%;
 }
 
@@ -209,6 +209,7 @@ header #nav-links a:hover::before {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   padding: 0;
 }
@@ -337,6 +338,26 @@ header div #close {
   header #nav-links li {
     padding: 0 1em 0 0;
   }
+  #projects {
+    flex-direction: column;
+  }
+  #projects .list-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects .list-projects #projects-first-column,
+#projects .list-projects #projects-second-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects .list-projects #projects-first-column .project,
+#projects .list-projects #projects-second-column .project {
+    width: 120px;
+    height: 80px;
+  }
 }
 @media only screen and (min-width: 750px) {
   :root {
@@ -364,26 +385,6 @@ header div #close {
   }
   #technologies div img {
     padding: 0 0.2em;
-  }
-  #projects {
-    flex-direction: column;
-  }
-  #projects .list-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #projects .list-projects #projects-first-column,
-#projects .list-projects #projects-second-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #projects .list-projects #projects-first-column .project,
-#projects .list-projects #projects-second-column .project {
-    width: 120px;
-    height: 80px;
   }
 }
 @media only screen and (min-width: 1300px) {
