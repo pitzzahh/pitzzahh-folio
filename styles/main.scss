@@ -6,7 +6,7 @@
 :root {
   font-family: "Inter", "Arial", "Consolas", sans-serif;
   --light-mode-color: black;
-  --dark-mode-color: white;
+  --dark-mode-color: #F1F0EE;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
   --padding-left-right: 2em;
@@ -92,7 +92,8 @@ header {
         height: 0.125em;
       }
       
-      &:hover::before {
+      &:hover::before,
+      &:active::before {
         width: 100%;
       }
     }
@@ -230,6 +231,7 @@ header {
           list-style: none;
           display: flex;
           flex-direction: row;
+          justify-content: center;
           align-items: center;
           padding: 0;
           li {
@@ -372,6 +374,28 @@ footer {
       }
     }
   }
+
+  #projects {
+    flex-direction: column;
+    .list-projects {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      #projects-first-column,
+      #projects-second-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .project {
+          width: 120px;
+          height: 80px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 750px) {
@@ -409,27 +433,6 @@ footer {
     }
   }
 
-  #projects {
-    flex-direction: column;
-    .list-projects {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      #projects-first-column,
-      #projects-second-column {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .project {
-          width: 120px;
-          height: 80px;
-        }
-      }
-    }
-  }
 }
 
 @media only screen and (min-width: 1300px) {
