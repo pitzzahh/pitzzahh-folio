@@ -358,6 +358,6 @@ footer p span {
 }
 @media only screen and (min-width: 1000px) {
   :root {
-    --padding-left-right: 18rem;
+    --padding-left-right: 25rem;
   }
 }/*# sourceMappingURL=main.css.map */
