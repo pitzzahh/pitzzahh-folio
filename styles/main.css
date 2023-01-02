@@ -40,44 +40,48 @@ img {
   width: 100%;
 }
 
-#nav-bar {
+header {
   padding: 2em var(--padding-left-right);
 }
-#nav-bar div {
+header div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-#nav-bar #menu-button {
+header div button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+header div #menu-button {
   display: var(--display);
 }
-#nav-bar #close {
+header div #close {
   display: none;
 }
-#nav-bar #mode-toggle {
+header div #mode-toggle {
   display: var(--display);
 }
-#nav-bar #nav-links {
+header #nav-links {
   display: none;
   flex-flow: column;
   list-style: none;
-  padding-top: var(--padding-left-right);
+  padding-top: 1em;
   width: 100%;
 }
-#nav-bar #nav-links li {
+header #nav-links li {
   padding: 0.5em 0;
 }
-#nav-bar #nav-links li .current-topic {
+header #nav-links li .current-topic {
   font-weight: bold;
   color: #fe7f2d;
 }
-#nav-bar #nav-links li:hover {
+header #nav-links li:hover {
   text-decoration: underline;
 }
-#nav-bar #nav-links a {
+header #nav-links a {
   text-decoration: none;
-}
-#nav-bar #nav-links:active {
-  display: var(--display);
 }
 
 #hero {

@@ -40,32 +40,38 @@ a {
 img {
   width: 100%;
 }
-
-#nav-bar {
+header {
   padding: 2em var(--padding-left-right);
-
   div {
     display: flex;
     justify-content: space-between;
-  }
+    align-items: center;
 
-  #menu-button {
-    display: var(--display);
-  }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
 
-  #close {
-    display: none;
-  }
-
-  #mode-toggle {
-    display: var(--display);
+    #menu-button {
+      display: var(--display);
+    }
+  
+    #close {
+      display: none;
+    }
+  
+    #mode-toggle {
+      display: var(--display);
+    }
   }
 
   #nav-links {
     display: none;
     flex-flow: column;
     list-style: none;
-    padding-top: var(--padding-left-right);
+    padding-top: 1em;
     width: 100%;
 
     li {
@@ -85,12 +91,9 @@ img {
       text-decoration: none;
     }
 
-    &:active {
-      display: var(--display);
-    }
-
   }
 }
+
 
 #hero {
   display: flex;

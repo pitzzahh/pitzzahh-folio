@@ -1,11 +1,15 @@
-const menuButton = document.getElementById('menu-button')
-const closeButton = document.getElementById('close')
-const modeToggle = document.getElementById('mode-toggle')
-const navBar = document.getElementById('nav-bar')
-const navLinks = document.getElementById('nav-links')
+function openNav() {
+    document.getElementById("menu-button").style.display = "none";
+    document.getElementById("close").style.display = "flex";
+    document.getElementById("nav-links").style.display = "flex";
+    document.querySelector('header').style.background = "#050505";
+    document.querySelector('header').style.height = "100vh";
+}
 
-// wont work
-menuButton.addEventListener('click', () => {
-    console.log('menu clicked')
-    navLinks.classList.toggle('active')
-})
+function closeNav() {
+    document.getElementById("menu-button").style.display = "flex";
+    document.getElementById("close").style.display = "none";
+    document.getElementById("nav-links").style.display = "none";
+    document.querySelector('header').style.background = "none";
+    document.querySelector('header').style.height = "0";
+}
