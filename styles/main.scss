@@ -199,6 +199,7 @@ img {
       border-radius: 50em;
       border-radius: 15px;
       margin: 0.2em;
+
       p {
         display: flex;
         align-items: flex-end;
@@ -213,16 +214,9 @@ img {
         justify-content: space-between;
         align-items: flex-end;
         padding: 0.5em;
-        a {
-          img {
-            width: 15px;
-            height: 15px;
-          }
-          &:hover {
-            ::-ms-tooltip {
-              content: 'Visit the project';
-            }
-          }
+        img {
+          width: 15px;
+          height: 15px;
         }
 
         ul {
@@ -374,15 +368,6 @@ footer {
     --padding-left-right: 6rem;
   }
 
-  #projects {
-    display: flex;
-    .list-projects {
-      grid-template-columns: auto auto auto auto;
-      justify-content: center;
- 
-    }
-  }
-
 }
 
 @media only screen and (min-width: 800px) {
@@ -412,10 +397,33 @@ footer {
     }
   }
 
+  #projects {
+    flex-direction: column;
+    .list-projects {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      #projects-first-column, #projects-second-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .project {
+            width: 120px;
+            height: 80px;
+        }
+
+      }
+
+    }
+  }
+
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1300px) {
   :root {
-    --padding-left-right: 25rem;
+    --padding-left-right: 23rem;
   }
 }

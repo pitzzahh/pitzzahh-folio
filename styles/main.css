@@ -191,12 +191,9 @@ img {
   align-items: flex-end;
   padding: 0.5em;
 }
-#projects .list-projects .project .details a img {
+#projects .list-projects .project .details img {
   width: 15px;
   height: 15px;
-}
-#projects .list-projects .project .details a:hover ::-ms-tooltip {
-  content: "Visit the project";
 }
 #projects .list-projects .project .details ul {
   list-style: none;
@@ -327,13 +324,6 @@ footer p span {
   :root {
     --padding-left-right: 6rem;
   }
-  #projects {
-    display: flex;
-  }
-  #projects .list-projects {
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-  }
 }
 @media only screen and (min-width: 800px) {
   :root {
@@ -355,9 +345,27 @@ footer p span {
   #technologies div img {
     padding: 0 0.2em;
   }
+  #projects {
+    flex-direction: column;
+  }
+  #projects .list-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects .list-projects #projects-first-column, #projects .list-projects #projects-second-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects .list-projects #projects-first-column .project, #projects .list-projects #projects-second-column .project {
+    width: 120px;
+    height: 80px;
+  }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1300px) {
   :root {
-    --padding-left-right: 25rem;
+    --padding-left-right: 23rem;
   }
 }/*# sourceMappingURL=main.css.map */
