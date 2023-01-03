@@ -120,8 +120,7 @@ header #nav-links li .current-page {
 #hero .info #main-info #my-cs {
   color: #a1c181;
 }
-#hero .info #sub-info {
-  list-style: 1.5em;
+#hero .info #sub-topic {
   font-size: 0.75em;
   font-style: normal;
   letter-spacing: 7.5%;
