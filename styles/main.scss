@@ -69,6 +69,8 @@ header {
 
     li {
       padding: 0.5em 0;
+      // check if li has the class current-page
+      //
       cursor: default;
       .current-page {
         font-weight: bold;
@@ -78,7 +80,7 @@ header {
 
     a {
       position: relative;
-      &::before {
+      &:not(.current-page)::before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -89,8 +91,8 @@ header {
         height: 0.125em;
       }
 
-      &:hover::before,
-      &:active::before {
+      &:not(.current-page):hover::before,
+      &:not(.current-page):active::before {
         width: 100%;
       }
     }
@@ -437,11 +439,3 @@ footer {
   }
 }
 
-@keyframes underline {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}

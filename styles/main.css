@@ -74,7 +74,7 @@ header #nav-links li .current-page {
 header #nav-links a {
   position: relative;
 }
-header #nav-links a::before {
+header #nav-links a:not(.current-page)::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -84,7 +84,7 @@ header #nav-links a::before {
   background-color: var(--dark-mode-color);
   height: 0.125em;
 }
-header #nav-links a:hover::before, header #nav-links a:active::before {
+header #nav-links a:not(.current-page):hover::before, header #nav-links a:not(.current-page):active::before {
   width: 100%;
 }
 
@@ -387,21 +387,5 @@ footer p span {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
-  }
-}
-@-webkit-keyframes underline {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes underline {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
