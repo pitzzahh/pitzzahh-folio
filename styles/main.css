@@ -48,10 +48,8 @@ header div {
   justify-content: space-between;
   align-items: center;
 }
-header div #menu-button {
-  display: inline-block;
-}
 header div #close {
+  cursor: pointer;
   display: none;
 }
 header div #mode-toggle {

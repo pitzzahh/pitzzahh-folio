@@ -49,11 +49,8 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    #menu-button {
-      display: inline-block;
-    }
-
     #close {
+      cursor: pointer;
       display: none;
     }
 
