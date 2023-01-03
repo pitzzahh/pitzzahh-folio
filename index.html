@@ -8,7 +8,6 @@
     />
     <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio" />
     <meta name="author" content="Peter John Arao" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/hamburgers.css" />
     <script src="scripts/main.js"></script>
     <title>Peter John Arao</title>
   </head>
@@ -24,53 +24,17 @@
     <header>
       <!-- Menu -->
       <div>
-        <svg
+        <button
           id="menu-button"
           onclick="openNav()"
-          class="toggle-button"
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
+          class="hamburger hamburger--elastic"
+          type="button"
+          title="menu-btn"
         >
-          <path
-            d="M3.75 11.25H26.25"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M3.75 19.25H26.25"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <svg
-          id="close"
-          onclick="closeNav()"
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-        >
-          <path
-            d="M22.5 7.5L7.5 22.5"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M7.5 7.5L22.5 22.5"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
 
         <!-- Toggle Dark Mode -->
         <svg
@@ -527,5 +491,27 @@
       </div>
       <div><p>Under Construction &#9881;</p></div>
     </footer>
+
+    <script>
+      var forEach = function (t, o, r) {
+        if ("[object Object]" === Object.prototype.toString.call(t))
+          for (var c in t)
+            Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
+        else for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t);
+      };
+
+      var hamburgers = document.querySelectorAll(".hamburger");
+      if (hamburgers.length > 0) {
+        forEach(hamburgers, function (hamburger) {
+          hamburger.addEventListener(
+            "click",
+            function () {
+              this.classList.toggle("is-active");
+            },
+            false
+          );
+        });
+      }
+    </script>
   </body>
 </html>

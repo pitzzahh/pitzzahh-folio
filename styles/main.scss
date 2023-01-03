@@ -6,7 +6,7 @@
 :root {
   font-family: "Inter", "Arial", "Consolas", sans-serif;
   --light-mode-color: black;
-  --dark-mode-color: #F1F0EE;
+  --dark-mode-color: #f1f0ee;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
   --padding-left-right: 2em;
@@ -50,7 +50,7 @@ header {
     align-items: center;
 
     #menu-button {
-      display: var(--display);
+      display: inline-block;
     }
 
     #close {
@@ -91,7 +91,7 @@ header {
         background-color: var(--dark-mode-color);
         height: 0.125em;
       }
-      
+
       &:hover::before,
       &:active::before {
         width: 100%;
@@ -135,7 +135,7 @@ header {
 
     #sub-info {
       list-style: 1.5em;
-      
+
       font-size: 0.75em;
       font-style: normal;
       letter-spacing: 7.5%;
@@ -354,13 +354,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 2em var(--padding-left-right);
+    
     div {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      #menu-button,
-      #close {
+      #close, #menu-button {
         display: none;
       }
     }
@@ -432,7 +432,6 @@ footer {
       }
     }
   }
-
 }
 
 @media only screen and (min-width: 1300px) {

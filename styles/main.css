@@ -6,7 +6,7 @@
 :root {
   font-family: "Inter", "Arial", "Consolas", sans-serif;
   --light-mode-color: black;
-  --dark-mode-color: #F1F0EE;
+  --dark-mode-color: #f1f0ee;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
   --padding-left-right: 2em;
@@ -49,7 +49,7 @@ header div {
   align-items: center;
 }
 header div #menu-button {
-  display: var(--display);
+  display: inline-block;
 }
 header div #close {
   display: none;
@@ -326,8 +326,7 @@ footer p span {
     justify-content: space-between;
     align-items: center;
   }
-  header div #menu-button,
-header div #close {
+  header div #close, header div #menu-button {
     display: none;
   }
   header #nav-links {
