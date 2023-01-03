@@ -6,7 +6,7 @@
 :root {
   font-family: "Inter", "Arial", "Consolas", sans-serif;
   --light-mode-color: black;
-  --dark-mode-color: #F1F0EE;
+  --dark-mode-color: #f1f0ee;
   --dark-mode-cs-color: #a1c181;
   --light-mode-cs-color: #6db33f;
   --padding-left-right: 2em;
@@ -48,10 +48,8 @@ header div {
   justify-content: space-between;
   align-items: center;
 }
-header div #menu-button {
-  display: var(--display);
-}
 header div #close {
+  cursor: pointer;
   display: none;
 }
 header div #mode-toggle {
@@ -76,7 +74,7 @@ header #nav-links li .current-page {
 header #nav-links a {
   position: relative;
 }
-header #nav-links a::before {
+header #nav-links a:not(.current-page)::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -86,7 +84,7 @@ header #nav-links a::before {
   background-color: var(--dark-mode-color);
   height: 0.125em;
 }
-header #nav-links a:hover::before, header #nav-links a:active::before {
+header #nav-links a:not(.current-page):hover::before, header #nav-links a:not(.current-page):active::before {
   width: 100%;
 }
 
@@ -326,8 +324,7 @@ footer p span {
     justify-content: space-between;
     align-items: center;
   }
-  header div #menu-button,
-header div #close {
+  header div #close, header div #menu-button {
     display: none;
   }
   header #nav-links {
@@ -390,21 +387,5 @@ header div #close {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
-  }
-}
-@-webkit-keyframes underline {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes underline {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
