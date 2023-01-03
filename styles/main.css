@@ -36,6 +36,23 @@ a {
   color: inherit;
 }
 
+.underline {
+  position: relative;
+}
+.underline:not(.current-page)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+  background-color: var(--dark-mode-color);
+  height: 0.125em;
+}
+.underline:not(.current-page):hover::before, .underline:not(.current-page):active::before {
+  width: 100%;
+}
+
 img {
   width: 100%;
 }
@@ -70,22 +87,6 @@ header #nav-links li {
 header #nav-links li .current-page {
   font-weight: bold;
   color: #fe7f2d;
-}
-header #nav-links a {
-  position: relative;
-}
-header #nav-links a:not(.current-page)::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  transition: width 0.2s ease-in-out;
-  background-color: var(--dark-mode-color);
-  height: 0.125em;
-}
-header #nav-links a:not(.current-page):hover::before, header #nav-links a:not(.current-page):active::before {
-  width: 100%;
 }
 
 #hero {
@@ -199,7 +200,11 @@ header #nav-links a:not(.current-page):hover::before, header #nav-links a:not(.c
   align-items: flex-end;
   padding: 0.5em;
 }
-#projects .list-projects .project .details img {
+#projects .list-projects .project .details a {
+  width: 15px;
+  height: 15px;
+}
+#projects .list-projects .project .details a img {
   width: 0.9375em;
   height: 0.9375em;
 }

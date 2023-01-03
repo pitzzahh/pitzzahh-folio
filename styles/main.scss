@@ -37,6 +37,25 @@ a {
   color: inherit;
 }
 
+.underline {
+  position: relative;
+  &:not(.current-page)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: width 0.2s ease-in-out;
+    background-color: var(--dark-mode-color);
+    height: 0.125em;
+  }
+
+  &:not(.current-page):hover::before,
+  &:not(.current-page):active::before {
+    width: 100%;
+  }
+}
+
 img {
   width: 100%;
 }
@@ -78,24 +97,7 @@ header {
       }
     }
 
-    a {
-      position: relative;
-      &:not(.current-page)::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        transition: width 0.2s ease-in-out;
-        background-color: var(--dark-mode-color);
-        height: 0.125em;
-      }
 
-      &:not(.current-page):hover::before,
-      &:not(.current-page):active::before {
-        width: 100%;
-      }
-    }
   }
 }
 
@@ -221,9 +223,13 @@ header {
         justify-content: space-between;
         align-items: flex-end;
         padding: 0.5em;
-        img {
-          width: 0.9375em;
-          height: 0.9375em;
+        a {
+          width: 15px;
+          height: 15px;
+          img {
+            width: 0.9375em;
+            height: 0.9375em;
+          }
         }
 
         ul {
