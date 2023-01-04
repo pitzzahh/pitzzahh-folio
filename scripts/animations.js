@@ -3,7 +3,7 @@ const animateFromTopElements = document.querySelectorAll(".animate-from-top");
 const animateFromLeftElements = document.querySelectorAll(".animate-from-left");
 const animateFromRightElements = document.querySelectorAll(".animate-from-right");
 
-const projectElements = document.querySelectorAll(".project");
+const projectElements = document.querySelectorAll(".pop-out");
 
 const fromBottomObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -59,7 +59,7 @@ projectElements.forEach((el) => {
   el.addEventListener('touchstart', () => {
     el.classList.add('hover');
   });
-  el.addEventListener('touchend', () => {
+  el.addEventListener('transitionend', () => {
     el.classList.remove('hover');
   });
 });

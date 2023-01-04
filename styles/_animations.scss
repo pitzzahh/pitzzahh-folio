@@ -1,19 +1,4 @@
 
-// Settings
-// ==================================================
-$positive-amount: 10% !default;
-$negative-amount: -10% !default;
-
-$transition-amount: 1s !default;
-
-$tranlate-y-positive: $positive-amount !default;
-$tranlate-y-negative: $negative-amount !default;
-$translate-x-positive: $positive-amount !default;
-$translate-x-negative: $negative-amount !default;
-
-$x-position: -10% !default;
-$y-position: -10% !default;
-
 // Hiding the elements
 .animate-from-bottom,
 .animate-from-top,
@@ -25,7 +10,7 @@ $y-position: -10% !default;
 }
 
 .animate-from-bottom {
-  transform: translateY($tranlate-y-positive);
+  transform: translateY($translate-y-negative);
 }
 
 .animate-from-left {
@@ -33,7 +18,7 @@ $y-position: -10% !default;
 }
 
 .animate-from-top {
-  transform: translateY($tranlate-y-negative);
+  transform: translateY($translate-y-positive);
 }
 
 .animate-from-right {
@@ -59,6 +44,7 @@ $y-position: -10% !default;
   transform: translateX(0);
 }
 
+// Animating the project cards
 .pop-out {
     transform: translate(0, 0); /* default position */
     transition: transform 0.5s; /* enable smooth transition */

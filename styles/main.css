@@ -1,54 +1,3 @@
-.animate-from-bottom,
-.animate-from-top,
-.animate-from-left,
-.animate-from-right {
-  opacity: 0;
-  filter: blur(0.0065rem);
-  transition: all 1s;
-}
-
-.animate-from-bottom {
-  transform: translateY(10%);
-}
-
-.animate-from-left {
-  transform: translateX(-10%);
-}
-
-.animate-from-top {
-  transform: translateY(-10%);
-}
-
-.animate-from-right {
-  transform: translateX(10%);
-}
-
-.show-from-bottom,
-.show-from-top,
-.show-from-left,
-.show-from-right {
-  opacity: 1;
-  filter: blur(0);
-}
-
-.show-from-bottom,
-.show-from-top {
-  transform: translateY(0);
-}
-
-.show-from-left,
-.show-from-right {
-  transform: translateX(0);
-}
-
-.pop-out {
-  transform: translate(0, 0); /* default position */
-  transition: transform 0.5s; /* enable smooth transition */
-}
-.pop-out:hover {
-  transform: translate(-10%, -10%); /* move to upper left corner */
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -56,27 +5,14 @@
 
 :root {
   font-family: "Inter", "Arial", "Consolas", sans-serif;
-  --light-mode-color: black;
-  --dark-mode-color: #f1f0ee;
-  --dark-mode-cs-color: #a1c181;
-  --light-mode-cs-color: #6db33f;
   --padding-left-right: 2em;
-  --project-width-mobile: 8.75em;
-  --project-height-mobile: 4.6875em;
-  --project-gradient: linear-gradient(
-    to right,
-    rgba(254, 127, 45, 1) 5%,
-    rgba(95, 153, 136, 1) 100%
-  );
-  --bg-image: url("../assets/bg.svg");
-  --display: flex;
 }
 
 body {
-  background-image: var(--bg-image);
+  background-image: url("../assets/bg.svg");
   background-size: fill;
   height: 100vh;
-  color: var(--dark-mode-color);
+  color: #f1f0ee;
   scroll-behavior: smooth;
 }
 body .sub-topic {
@@ -97,7 +33,7 @@ a {
   left: 0;
   width: 0;
   transition: width 0.2s ease-in-out;
-  background-color: var(--dark-mode-color);
+  background-color: #f1f0ee;
   height: 0.125em;
 }
 .underline:not(.current-page):hover::before, .underline:not(.current-page):active::before {
@@ -122,7 +58,7 @@ header div #close {
 }
 header div #mode-toggle {
   cursor: pointer;
-  display: var(--display);
+  display: flex;
 }
 header #nav-links {
   display: none;
@@ -251,9 +187,9 @@ header #nav-links li .current-page {
 #projects .list-projects .project {
   display: grid;
   grid-template-rows: auto auto;
-  width: var(--project-width-mobile);
-  height: var(--project-height-mobile);
-  background: var(--project-gradient);
+  width: 8.75em;
+  height: 4.6875em;
+  background: linear-gradient(to right, rgb(254, 127, 45) 5%, rgb(95, 153, 136) 100%);
   border-radius: 3.125em;
   border-radius: 0.9375em;
   margin: 0.2em;
@@ -346,23 +282,22 @@ header #nav-links li .current-page {
   font-size: 0.8125em;
 }
 #contact .email {
-  --height: 2.1875em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 0 0.5em 0;
 }
 #contact .email .mail {
-  height: var(--height);
+  height: 2.1875em;
   width: 100%;
   border: none;
   border-radius: 0.625em;
   padding: 0 1em;
   background: #383838;
-  color: var(--dark-mode-color);
+  color: #f1f0ee;
 }
 #contact .email svg {
-  height: var(--height);
+  height: 2.1875em;
 }
 #contact .message-container {
   display: flex;
@@ -376,7 +311,7 @@ header #nav-links li .current-page {
   border: none;
   border-radius: 0.625em;
   background: #383838;
-  color: var(--dark-mode-color);
+  color: #f1f0ee;
 }
 #contact:nth-child(2) {
   transition-delay: 200ms;
@@ -514,4 +449,54 @@ header div #menu-button {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+}
+.animate-from-bottom,
+.animate-from-top,
+.animate-from-left,
+.animate-from-right {
+  opacity: 0;
+  filter: blur(0.0065rem);
+  transition: all 1s;
+}
+
+.animate-from-bottom {
+  transform: translateY(-12%);
+}
+
+.animate-from-left {
+  transform: translateX(-12%);
+}
+
+.animate-from-top {
+  transform: translateY(12%);
+}
+
+.animate-from-right {
+  transform: translateX(12%);
+}
+
+.show-from-bottom,
+.show-from-top,
+.show-from-left,
+.show-from-right {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.show-from-bottom,
+.show-from-top {
+  transform: translateY(0);
+}
+
+.show-from-left,
+.show-from-right {
+  transform: translateX(0);
+}
+
+.pop-out {
+  transform: translate(0, 0); /* default position */
+  transition: transform 0.5s; /* enable smooth transition */
+}
+.pop-out:hover {
+  transform: translate(-10%, -10%); /* move to upper left corner */
 }/*# sourceMappingURL=main.css.map */
