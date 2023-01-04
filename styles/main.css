@@ -113,6 +113,8 @@ header #nav-links li .current-page {
 #hero .info #main-info {
   font-size: 2em;
   font-weight: bold;
+  -webkit-animation: intro-load 2s forwards;
+          animation: intro-load 2s forwards;
 }
 #hero .info #main-info #my-name {
   color: #fe7f2d;
@@ -125,6 +127,8 @@ header #nav-links li .current-page {
   font-style: normal;
   letter-spacing: 7.5%;
   text-transform: uppercase;
+  -webkit-animation: intro-load 2s forwards;
+          animation: intro-load 2s forwards;
 }
 #hero .call-to-action {
   display: flex;
@@ -219,6 +223,15 @@ header #nav-links li .current-page {
   font-size: 0.5em;
   padding: 0 0.2em;
 }
+#projects .list-projects .project:nth-child(2) {
+  transition-delay: 400ms;
+}
+#projects .list-projects .project:nth-child(3) {
+  transition-delay: 600ms;
+}
+#projects .list-projects .project:nth-child(4) {
+  transition-delay: 800ms;
+}
 
 #about-me .title {
   padding: 2em var(--padding-left-right);
@@ -238,7 +251,6 @@ header #nav-links li .current-page {
   font-size: 0.875em;
   font-style: light;
   margin-bottom: 0.78125em;
-  text-align: left;
   padding: 0 var(--padding-left-right);
   font-weight: normal;
 }
@@ -305,6 +317,32 @@ footer p span {
   color: #d33432;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(0.0065rem);
+  transform: translateY(-50%);
+  transition: all 1s;
+}
+
+.hidden-2 {
+  opacity: 0;
+  filter: blur(0.0065rem);
+  transform: translateX(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.show-2 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 @media only screen and (min-width: 550px) {
   #hero {
     padding: 0 var(--padding-left-right) 0 var(--padding-left-right);
@@ -328,7 +366,8 @@ footer p span {
     justify-content: space-between;
     align-items: center;
   }
-  header div #close, header div #menu-button {
+  header div #close,
+header div #menu-button {
     display: none;
   }
   header #nav-links {
@@ -391,5 +430,25 @@ footer p span {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
+  }
+}
+@-webkit-keyframes intro-load {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes intro-load {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }/*# sourceMappingURL=main.css.map */
