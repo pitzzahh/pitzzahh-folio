@@ -1,53 +1,65 @@
-const animteToBottomElements = document.querySelectorAll(".animate-to-bottom");
-const animateToTopElements = document.querySelectorAll(".animate-to-top");
-const animateToLeftElements = document.querySelectorAll(".animate-to-left");
-const animateToRightElements = document.querySelectorAll(".animate-to-right");
+const animteFromBottomElements = document.querySelectorAll(".animate-from-bottom");
+const animateFromTopElements = document.querySelectorAll(".animate-from-top");
+const animateFromLeftElements = document.querySelectorAll(".animate-from-left");
+const animateFromRightElements = document.querySelectorAll(".animate-from-right");
 
-const toBottomObserver = new IntersectionObserver((entries) => {
+const projectElements = document.querySelectorAll(".project");
+
+const fromBottomObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      entry.target.classList.add("show-to-bottom");
+      entry.target.classList.add("show-from-bottom");
     } else {
-      entry.target.classList.remove("show-to-bottom");
+      entry.target.classList.remove("show-from-bottom");
     }
   });
 });
 
-const toTopObserver = new IntersectionObserver((entries) => {
+const fromTopObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      entry.target.classList.add("show-to-top");
+      entry.target.classList.add("show-from-top");
     } else {
-      entry.target.classList.remove("show-to-top");
+      entry.target.classList.remove("show-from-top");
     }
   });
 });
 
-const toLeftObserver = new IntersectionObserver((entries) => {
+const fromLeftObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     if (entry.isIntersecting) {
-      entry.target.classList.add("show-to-left");
+      entry.target.classList.add("show-from-left");
     } else {
-      entry.target.classList.remove("show-to-left");
+      entry.target.classList.remove("show-from-left");
     }
   });
 });
 
-const toRightObserver = new IntersectionObserver((entries) => {
+const fromRightObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
         if (entry.isIntersecting) {
-        entry.target.classList.add("show-to-right");
+        entry.target.classList.add("show-from-right");
         } else {
-        entry.target.classList.remove("show-to-right");
+        entry.target.classList.remove("show-from-right");
         }
     });
 });
 
-animteToBottomElements.forEach((el) => toBottomObserver.observe(el));
-animateToTopElements.forEach((el) => toTopObserver.observe(el));
-animateToLeftElements.forEach((el) => toLeftObserver.observe(el));
-animateToRightElements.forEach((el) => toRightObserver.observe(el));
+animteFromBottomElements.forEach((el) => fromBottomObserver.observe(el));
+animateFromTopElements.forEach((el) => fromTopObserver.observe(el));
+animateFromLeftElements.forEach((el) => fromLeftObserver.observe(el));
+animateFromRightElements.forEach((el) => fromRightObserver.observe(el));
+
+
+projectElements.forEach((el) => {
+  el.addEventListener('touchstart', () => {
+    el.classList.add('hover');
+  });
+  el.addEventListener('touchend', () => {
+    el.classList.remove('hover');
+  });
+});

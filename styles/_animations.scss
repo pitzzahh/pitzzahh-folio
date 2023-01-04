@@ -1,56 +1,68 @@
-@use "sass:math";
 
 // Settings
 // ==================================================
-$positive-amount: 2% !default;
-$negative-amount: -2% !default;
+$positive-amount: 10% !default;
+$negative-amount: -10% !default;
+
+$transition-amount: 1s !default;
 
 $tranlate-y-positive: $positive-amount !default;
 $tranlate-y-negative: $negative-amount !default;
 $translate-x-positive: $positive-amount !default;
 $translate-x-negative: $negative-amount !default;
 
+$x-position: -10% !default;
+$y-position: -10% !default;
+
 // Hiding the elements
-.animate-to-bottom,
-.animate-to-top,
-.animate-to-left,
-.animate-to-right {
+.animate-from-bottom,
+.animate-from-top,
+.animate-from-left,
+.animate-from-right {
   opacity: 0;
   filter: blur(0.0065rem);
-  transition: all 1s;
+  transition: all $transition-amount;
 }
 
-.animate-to-bottom {
+.animate-from-bottom {
   transform: translateY($tranlate-y-positive);
 }
 
-.animate-to-left {
-  transform: translateX($translate-x-positive);
-}
-
-.animate-to-top {
-  transform: translateY($tranlate-y-negative);
-}
-
-.animate-to-right {
+.animate-from-left {
   transform: translateX($translate-x-negative);
 }
 
+.animate-from-top {
+  transform: translateY($tranlate-y-negative);
+}
+
+.animate-from-right {
+  transform: translateX($translate-x-positive);
+}
+
 // Showing the elements
-.show-to-bottom,
-.show-to-top,
-.show-to-left,
-.show-to-right {
+.show-from-bottom,
+.show-from-top,
+.show-from-left,
+.show-from-right {
   opacity: 1;
   filter: blur(0);
 }
 
-.show-to-bottom,
-.show-to-top {
+.show-from-bottom,
+.show-from-top {
   transform: translateY(0);
 }
 
-.show-to-left,
-.show-to-right {
+.show-from-left,
+.show-from-right {
   transform: translateX(0);
+}
+
+.pop-out {
+    transform: translate(0, 0); /* default position */
+    transition: transform 0.5s; /* enable smooth transition */
+    &:hover{
+        transform: translate($x-position, $y-position); /* move to upper left corner */
+    }
 }

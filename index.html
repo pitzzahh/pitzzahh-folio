@@ -28,11 +28,11 @@
         <button
           id="menu-button"
           onclick="openNav()"
-          class="hamburger hamburger--elastic"
+          class="hamburger hamburger--elastic animate-from-left"
           type="button"
           title="menu-btn"
         >
-          <span class="hamburger-box">
+          <span class="hamburger-box animate-from-left">
             <span class="hamburger-inner"></span>
           </span>
         </button>
@@ -40,7 +40,7 @@
         <!-- Toggle Dark Mode -->
         <svg
           id="mode-toggle"
-          class="toggle-button"
+          class="toggle-button animate-from-right"
           width="30"
           height="30"
           viewBox="0 0 30 30"
@@ -56,12 +56,16 @@
           />
         </svg>
       </div>
-      <nav id="nav-bar">
-        <ul id="nav-links">
+      <nav id="nav-bar" class="animate-from-left">
+        <ul id="nav-links" class="animate-from-top">
           <li><a id="home-page" class="current-page underline">Home</a></li>
+          <hr>
           <li><a id="projects-page" class="underline">Projects</a></li>
+          <hr>
           <li><a id="about-page" class="underline">About Me</a></li>
+          <hr>
           <li><a id="contact-page" class="underline">Contact</a></li>
+          <hr>
         </ul>
       </nav>
     </header>
@@ -72,21 +76,21 @@
           <img
             src="assets/avatar.jpg"
             alt="A picture of the owner of this webiste"
-            class="avatar animate-to-top"
+            class="avatar animate-from-bottom"
           />
           <div>
-            <p id="main-info" class="animate-to-bottom">
+            <p id="main-info" class="animate-from-bottom">
               Hello&#128075;, I&apos;m <span id="my-name">Peter John</span> you
               can call me
               <span id="my-cs">pitzzahh</span>
             </p>
-            <p id="sub-topic" class="animate-to-top">
+            <p id="sub-topic" class="animate-from-bottom">
               Software developer, embracing web development, and UI/UX design.
             </p>
           </div>
         </div>
 
-        <div class="call-to-action animate-to-bottom">
+        <div class="call-to-action animate-from-bottom">
           <svg width="24" height="57" viewBox="0 0 24 57" fill="none">
             <circle cx="12" cy="14" r="7" fill="url(#paint0_linear_167_690)">
               <animate
@@ -138,57 +142,57 @@
         <p class="sub-topic">Technologies</p>
         <div>
           <img
-            class="normal animate-to-right"
+            class="normal animate-from-bottom"
             src="assets/technologies/html.svg"
             alt="HTML 5 icon"
           />
           <img
-            class="normal animate-to-right"
+            class="normal animate-from-bottom"
             src="assets/technologies/css.svg"
             alt="CSS 3 icon"
           />
           <img
-            class="normal animate-to-right"
+            class="normal animate-from-bottom"
             src="assets/technologies/python.svg"
             alt="Python programming language icon"
           />
           <img
-            class="normal animate-to-right"
+            class="normal animate-from-bottom"
             src="assets/technologies/maven.svg"
             alt="maven build tool icon"
           />
           <img
-            class="normal animate-to-right"
+            class="normal animate-from-bottom"
             src="assets/technologies/spring.svg"
             alt="Spring framework icon"
           />
           <img
-            class="custom animate-to-right"
+            class="custom animate-from-bottom"
             src="assets/technologies/java.svg"
             alt="Java programming language icon"
           />
           <img
-            class="normal animate-to-left"
+            class="normal animate-from-bottom"
             src="assets/technologies/git.svg"
             alt="Git version control software icon"
           />
           <img
-            class="normal animate-to-left"
+            class="normal animate-from-bottom"
             src="assets/technologies/github.svg"
             alt="Github hosting service icon"
           />
           <img
-            class="normal animate-to-left"
+            class="normal animate-from-bottom"
             src="assets/technologies/postgres.svg"
             alt="PostgreSQL Database Management System icon"
           />
           <img
-            class="normal animate-to-left"
+            class="normal animate-from-bottom"
             src="assets/technologies/sqlite.svg"
             alt="SQLite file based database icon"
           />
           <img
-            class="custom animate-to-left"
+            class="custom animate-from-bottom"
             src="assets/technologies/figma.svg"
             alt="Figma icon"
           />
@@ -199,7 +203,7 @@
         <p class="sub-topic">Projects</p>
         <div class="list-projects">
           <div id="projects-first-column">
-            <div class="project animate-to-right">
+            <div class="project animate-from-bottom pop-out">
               <p>ATM API</p>
               <div class="details">
                 <a
@@ -228,7 +232,7 @@
               </div>
             </div>
 
-            <div class="project animate-to-right">
+            <div class="project animate-from-bottom pop-out">
               <p>Pin Generator</p>
               <div class="details">
                 <a
@@ -242,7 +246,7 @@
               </div>
             </div>
 
-            <div class="project animate-to-right">
+            <div class="project animate-from-bottom pop-out">
               <p>iLib</p>
               <div class="details">
                 <a
@@ -256,7 +260,7 @@
               </div>
             </div>
 
-            <div class="project animate-to-right">
+            <div class="project animate-from-bottom pop-out">
               <p>PUB</p>
               <div class="details">
                 <a href="https://github.com/pitzzahh/atm-gui" target="_blank"
@@ -285,7 +289,7 @@
           </div>
 
           <div id="projects-second-column">
-            <div class="project animate-to-left">
+            <div class="project animate-from-bottom pop-out">
               <p>Util Classes</p>
               <div class="details">
                 <a
@@ -314,7 +318,7 @@
               </div>
             </div>
 
-            <div class="project animate-to-left">
+            <div class="project animate-from-bottom pop-out">
               <p>Payroll App</p>
               <div class="details">
                 <a href="https://github.com/pitzzahh/payroll" target="_blank"
@@ -341,7 +345,7 @@
               </div>
             </div>
 
-            <div class="project animate-to-left">
+            <div class="project animate-from-bottom pop-out">
               <p>Point Of Sale</p>
               <div class="details">
                 <a
@@ -370,7 +374,7 @@
               </div>
             </div>
 
-            <div class="project animate-to-left">
+            <div class="project animate-from-bottom pop-out">
               <p>Discord Bot</p>
               <div class="details">
                 <a
@@ -405,7 +409,7 @@
       <section id="about-me">
         <p class="title sub-topic">About Me</p>
         <div>
-          <p class="details animate-to-left">
+          <p class="details animate-from-bottom">
             I&apos;m Peter John Arao, a self-taught software developer. I
             started learning programming in January 2020, pandemic started and I
             decided to learn something while at home. I first learned Java and I
@@ -415,7 +419,7 @@
         </div>
         <div>
           <p class="sub-title">Education</p>
-          <p class="sub-detail animate-to-right">
+          <p class="sub-detail animate-from-bottom">
             I am currently studying B.S. in Information Technology at STI
             College Legazpi
           </p>
@@ -424,7 +428,7 @@
 
       <section id="contact">
         <p class="title sub-topic">Contact</p>
-        <div class="socials animate-to-left">
+        <div class="socials animate-from-bottom">
           <p class="sub-title">Social Links</p>
           <ul>
             <li>
@@ -455,7 +459,7 @@
         </div>
 
         <div class="mail">
-          <div class="email">
+          <div class="email animate-from-left">
             <input
               class="mail"
               href="mailto:"
@@ -473,7 +477,7 @@
               />
             </svg>
           </div>
-          <div class="message-container">
+          <div class="message-container animate-from-right">
             <textarea
               name="message"
               id="u-message"

@@ -1,44 +1,52 @@
-.animate-to-bottom,
-.animate-to-top,
-.animate-to-left,
-.animate-to-right {
+.animate-from-bottom,
+.animate-from-top,
+.animate-from-left,
+.animate-from-right {
   opacity: 0;
   filter: blur(0.0065rem);
   transition: all 1s;
 }
 
-.animate-to-bottom {
-  transform: translateY(2%);
+.animate-from-bottom {
+  transform: translateY(10%);
 }
 
-.animate-to-left {
-  transform: translateX(2%);
+.animate-from-left {
+  transform: translateX(-10%);
 }
 
-.animate-to-top {
-  transform: translateY(-2%);
+.animate-from-top {
+  transform: translateY(-10%);
 }
 
-.animate-to-right {
-  transform: translateX(-2%);
+.animate-from-right {
+  transform: translateX(10%);
 }
 
-.show-to-bottom,
-.show-to-top,
-.show-to-left,
-.show-to-right {
+.show-from-bottom,
+.show-from-top,
+.show-from-left,
+.show-from-right {
   opacity: 1;
   filter: blur(0);
 }
 
-.show-to-bottom,
-.show-to-top {
+.show-from-bottom,
+.show-from-top {
   transform: translateY(0);
 }
 
-.show-to-left,
-.show-to-right {
+.show-from-left,
+.show-from-right {
   transform: translateX(0);
+}
+
+.pop-out {
+  transform: translate(0, 0); /* default position */
+  transition: transform 0.5s; /* enable smooth transition */
+}
+.pop-out:hover {
+  transform: translate(-10%, -10%); /* move to upper left corner */
 }
 
 * {
@@ -429,6 +437,9 @@ header div #menu-button {
   }
   header #nav-links li {
     padding: 0 1em 0 0;
+  }
+  header #nav-links hr {
+    display: none;
   }
   #projects {
     flex-direction: column;
