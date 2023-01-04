@@ -1,0 +1,56 @@
+@use "sass:math";
+
+// Settings
+// ==================================================
+$positive-amount: 2% !default;
+$negative-amount: -2% !default;
+
+$tranlate-y-positive: $positive-amount !default;
+$tranlate-y-negative: $negative-amount !default;
+$translate-x-positive: $positive-amount !default;
+$translate-x-negative: $negative-amount !default;
+
+// Hiding the elements
+.animate-to-bottom,
+.animate-to-top,
+.animate-to-left,
+.animate-to-right {
+  opacity: 0;
+  filter: blur(0.0065rem);
+  transition: all 1s;
+}
+
+.animate-to-bottom {
+  transform: translateY($tranlate-y-positive);
+}
+
+.animate-to-left {
+  transform: translateX($translate-x-positive);
+}
+
+.animate-to-top {
+  transform: translateY($tranlate-y-negative);
+}
+
+.animate-to-right {
+  transform: translateX($translate-x-negative);
+}
+
+// Showing the elements
+.show-to-bottom,
+.show-to-top,
+.show-to-left,
+.show-to-right {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.show-to-bottom,
+.show-to-top {
+  transform: translateY(0);
+}
+
+.show-to-left,
+.show-to-right {
+  transform: translateX(0);
+}

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="dist/hamburgers.css" />
     <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/animations.js"></script>
     <title>Peter John Arao</title>
   </head>
   <body>
@@ -71,21 +72,21 @@
           <img
             src="assets/avatar.jpg"
             alt="A picture of the owner of this webiste"
-            class="avatar hidden-2"
+            class="avatar animate-to-top"
           />
           <div>
-            <p id="main-info" class="hidden">
+            <p id="main-info" class="animate-to-bottom">
               Hello&#128075;, I&apos;m <span id="my-name">Peter John</span> you
               can call me
               <span id="my-cs">pitzzahh</span>
             </p>
-            <p id="sub-topic" class="hidden">
+            <p id="sub-topic" class="animate-to-top">
               Software developer, embracing web development, and UI/UX design.
             </p>
           </div>
         </div>
 
-        <div class="call-to-action hidden">
+        <div class="call-to-action animate-to-bottom">
           <svg width="24" height="57" viewBox="0 0 24 57" fill="none">
             <circle cx="12" cy="14" r="7" fill="url(#paint0_linear_167_690)">
               <animate
@@ -137,57 +138,57 @@
         <p class="sub-topic">Technologies</p>
         <div>
           <img
-            class="normal hidden"
+            class="normal animate-to-right"
             src="assets/technologies/html.svg"
             alt="HTML 5 icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-right"
             src="assets/technologies/css.svg"
             alt="CSS 3 icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-right"
             src="assets/technologies/python.svg"
             alt="Python programming language icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-right"
             src="assets/technologies/maven.svg"
             alt="maven build tool icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-right"
             src="assets/technologies/spring.svg"
             alt="Spring framework icon"
           />
           <img
-            class="custom hidden"
+            class="custom animate-to-right"
             src="assets/technologies/java.svg"
             alt="Java programming language icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-left"
             src="assets/technologies/git.svg"
             alt="Git version control software icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-left"
             src="assets/technologies/github.svg"
             alt="Github hosting service icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-left"
             src="assets/technologies/postgres.svg"
             alt="PostgreSQL Database Management System icon"
           />
           <img
-            class="normal hidden"
+            class="normal animate-to-left"
             src="assets/technologies/sqlite.svg"
             alt="SQLite file based database icon"
           />
           <img
-            class="custom hidden"
+            class="custom animate-to-left"
             src="assets/technologies/figma.svg"
             alt="Figma icon"
           />
@@ -198,7 +199,7 @@
         <p class="sub-topic">Projects</p>
         <div class="list-projects">
           <div id="projects-first-column">
-            <div class="project hidden">
+            <div class="project animate-to-right">
               <p>ATM API</p>
               <div class="details">
                 <a
@@ -227,7 +228,7 @@
               </div>
             </div>
 
-            <div class="project hidden">
+            <div class="project animate-to-right">
               <p>Pin Generator</p>
               <div class="details">
                 <a
@@ -241,7 +242,7 @@
               </div>
             </div>
 
-            <div class="project hidden">
+            <div class="project animate-to-right">
               <p>iLib</p>
               <div class="details">
                 <a
@@ -255,7 +256,7 @@
               </div>
             </div>
 
-            <div class="project hidden">
+            <div class="project animate-to-right">
               <p>PUB</p>
               <div class="details">
                 <a href="https://github.com/pitzzahh/atm-gui" target="_blank"
@@ -284,7 +285,7 @@
           </div>
 
           <div id="projects-second-column">
-            <div class="project hidden">
+            <div class="project animate-to-left">
               <p>Util Classes</p>
               <div class="details">
                 <a
@@ -313,7 +314,7 @@
               </div>
             </div>
 
-            <div class="project hidden">
+            <div class="project animate-to-left">
               <p>Payroll App</p>
               <div class="details">
                 <a href="https://github.com/pitzzahh/payroll" target="_blank"
@@ -340,7 +341,7 @@
               </div>
             </div>
 
-            <div class="project hidden">
+            <div class="project animate-to-left">
               <p>Point Of Sale</p>
               <div class="details">
                 <a
@@ -369,7 +370,7 @@
               </div>
             </div>
 
-            <div class="project hidden">
+            <div class="project animate-to-left">
               <p>Discord Bot</p>
               <div class="details">
                 <a
@@ -404,7 +405,7 @@
       <section id="about-me">
         <p class="title sub-topic">About Me</p>
         <div>
-          <p class="details hidden-2">
+          <p class="details animate-to-left">
             I&apos;m Peter John Arao, a self-taught software developer. I
             started learning programming in January 2020, pandemic started and I
             decided to learn something while at home. I first learned Java and I
@@ -413,8 +414,8 @@
           </p>
         </div>
         <div>
-          <p class="sub-title left-alignment">Education</p>
-          <p class="sub-detail left-alignment">
+          <p class="sub-title">Education</p>
+          <p class="sub-detail animate-to-right">
             I am currently studying B.S. in Information Technology at STI
             College Legazpi
           </p>
@@ -423,7 +424,7 @@
 
       <section id="contact">
         <p class="title sub-topic">Contact</p>
-        <div class="socials hidden-2">
+        <div class="socials animate-to-left">
           <p class="sub-title">Social Links</p>
           <ul>
             <li>
