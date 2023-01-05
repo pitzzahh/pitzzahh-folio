@@ -100,8 +100,6 @@ header #nav-links li .current-page {
 #hero .info #main-info {
   font-size: 2em;
   font-weight: bold;
-  -webkit-animation: intro-load 2s forwards;
-          animation: intro-load 2s forwards;
 }
 #hero .info #main-info #my-name {
   color: #fe7f2d;
@@ -430,26 +428,6 @@ header div #menu-button {
     --padding-left-right: 23rem;
   }
 }
-@-webkit-keyframes intro-load {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-@keyframes intro-load {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
 .animate-from-bottom,
 .animate-from-top,
 .animate-from-left,
@@ -464,7 +442,7 @@ header div #menu-button {
 }
 
 .animate-from-left {
-  transform: translateX(-12%);
+  transform: translateX(-10%);
 }
 
 .animate-from-top {
@@ -472,7 +450,7 @@ header div #menu-button {
 }
 
 .animate-from-right {
-  transform: translateX(12%);
+  transform: translateX(10%);
 }
 
 .show-from-bottom,
@@ -498,5 +476,5 @@ header div #menu-button {
   transition: transform 0.5s; /* enable smooth transition */
 }
 .pop-out:hover {
-  transform: translate(-10%, -10%); /* move to upper left corner */
+  transform: translate(-5%, -5%); /* move to upper left corner */
 }/*# sourceMappingURL=main.css.map */

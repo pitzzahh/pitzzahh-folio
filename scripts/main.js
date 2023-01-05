@@ -20,5 +20,6 @@ function checkDeviceWidth() {
   } else {
     document.getElementById("nav-links").style.display = "none"
     document.querySelector("header").style.background = "none"
+    document.querySelector(".hamburger").classList.remove("is-active")
   }
 }

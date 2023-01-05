@@ -14,7 +14,7 @@
 }
 
 .animate-from-left {
-  transform: translateX($translate-x-negative);
+  transform: translateX(-10%);
 }
 
 .animate-from-top {
@@ -22,7 +22,7 @@
 }
 
 .animate-from-right {
-  transform: translateX($translate-x-positive);
+  transform: translateX(10%);
 }
 
 // Showing the elements

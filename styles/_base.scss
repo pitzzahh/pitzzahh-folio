@@ -109,7 +109,6 @@ header {
     #main-info {
       font-size: 2em;
       font-weight: bold;
-      animation: intro-load 2s forwards;
       #my-name {
         color: #fe7f2d;
       }
@@ -484,14 +483,5 @@ footer {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
-  }
-}
-
-@keyframes intro-load {
-  from {
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
