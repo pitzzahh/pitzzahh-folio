@@ -287,8 +287,9 @@ header #nav-links li .current-page {
   align-items: center;
   padding: 2em 0;
 }
-#contact .socials div a {
+#contact .socials div img {
   margin: 0.5em;
+  width: 2em;
 }
 #contact .email {
   display: flex;
