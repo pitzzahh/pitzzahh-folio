@@ -63,3 +63,29 @@ projectElements.forEach((el) => {
     el.classList.remove('hover');
   });
 });
+
+const btn = document.getElementById("scroll-up");
+
+// Listen for scroll event
+window.onscroll = function() {
+    // Get the current scroll position
+    const scrollPos = document.body.scrollTop || document.documentElement.scrollTop;
+
+    // Get the total height of the page
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+
+    // If the user has scrolled more than halfway down the page
+    if (scrollPos > totalHeight / 2) {
+        // Show the button
+        btn.style.display = "block";
+    } else {
+        // Hide the button
+        btn.style.display = "none";
+    }
+};
+
+// Listen for click event on button
+btn.addEventListener("click", function() {
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});

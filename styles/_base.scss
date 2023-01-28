@@ -21,6 +21,14 @@ body {
   .sub-topic {
     font-weight: bold;
   }
+
+  #scroll-up {
+    position: fixed;
+    bottom: 2em;
+    right: 1em;
+    cursor: pointer;
+    display: none;
+  }
 }
 
 a {
