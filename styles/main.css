@@ -460,7 +460,7 @@ header div #menu-button {
 }
 
 .animate-from-left {
-  transform: translateX(-10%);
+  transform: translateX(-8%);
 }
 
 .animate-from-top {
@@ -468,7 +468,7 @@ header div #menu-button {
 }
 
 .animate-from-right {
-  transform: translateX(10%);
+  transform: translateX(8%);
 }
 
 .show-from-bottom,
