@@ -8,12 +8,15 @@
   --padding-left-right: 2em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: $bg-image;
   background-size: fill;
   height: 100vh;
   color: $dark-mode-color;
-  scroll-behavior: smooth;
 
   .sub-topic {
     font-weight: bold;
@@ -26,6 +29,7 @@ a {
 
 .underline {
   position: relative;
+  text-decoration: none;
   &:not(.current-page)::before {
     content: "";
     position: absolute;
@@ -48,9 +52,9 @@ img {
 }
 
 header {
-
   padding: 2em var(--padding-left-right);
-
+  position: -webkit-sticky;
+  top: 0;
   div {
     display: flex;
     justify-content: space-between;
@@ -264,7 +268,6 @@ header {
 }
 
 #about-me {
-
   .title {
     padding: 2em var(--padding-left-right);
     font-size: 1.25em;
@@ -302,7 +305,6 @@ header {
 }
 
 #contact {
-
   padding: 0.5em var(--padding-left-right);
 
   .title {

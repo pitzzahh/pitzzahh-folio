@@ -8,12 +8,15 @@
   --padding-left-right: 2em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../assets/bg.svg");
   background-size: fill;
   height: 100vh;
   color: #f1f0ee;
-  scroll-behavior: smooth;
 }
 body .sub-topic {
   font-weight: bold;
@@ -25,6 +28,7 @@ a {
 
 .underline {
   position: relative;
+  text-decoration: none;
 }
 .underline:not(.current-page)::before {
   content: "";
@@ -46,6 +50,8 @@ img {
 
 header {
   padding: 2em var(--padding-left-right);
+  position: -webkit-sticky;
+  top: 0;
 }
 header div {
   display: flex;
