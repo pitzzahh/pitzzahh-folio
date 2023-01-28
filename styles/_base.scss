@@ -54,7 +54,9 @@ img {
 header {
   padding: 2em var(--padding-left-right);
   position: -webkit-sticky;
+  position: sticky;
   top: 0;
+  z-index: 1;
   div {
     display: flex;
     justify-content: space-between;
@@ -312,10 +314,14 @@ header {
     font-size: 1.25em;
   }
 
-  ul {
-    padding: 1em 2em;
-    li {
-      font-size: 0.8125em;
+  .socials div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+
+    a {
+      margin: 0.5em;
     }
   }
 
@@ -324,7 +330,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 0 0.5em 0;
+    padding: 0 0 0.5em 0;
     .mail {
       height: $height;
       width: 100%;
@@ -396,7 +402,6 @@ footer {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 2em var(--padding-left-right);
 
     div {
       display: flex;

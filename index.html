@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="dist/hamburgers.css" />
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -93,12 +91,12 @@
             class="avatar animate-from-bottom"
           />
           <div>
-            <p id="main-info" class="animate-from-bottom">
-              Hello&#128075;, I&apos;m <span id="my-name">Peter John</span> you
-              can call me
+            <p id="main-info">
+              Hello&#128075;, I&apos;m
+              <span id="my-name">Peter John</span> you can call me
               <span id="my-cs">pitzzahh</span>
             </p>
-            <p id="sub-topic" class="animate-from-bottom">
+            <p id="sub-topic">
               Software developer, embracing web development, and UI/UX design.
             </p>
           </div>
@@ -444,32 +442,38 @@
         <p class="title sub-topic">Contact</p>
         <div class="socials animate-from-bottom">
           <p class="sub-title">Social Links</p>
-          <ul>
-            <li>
-              GitHub:
-              <a href="https://github.com/pitzzahh" target="_blank"
-                >@pitzzahh</a
-              >
-            </li>
-            <li>
-              Twitter:
-              <a href="https://twitter.com/pitzzahh" target="_blank"
-                >@pitzzahh</a
-              >
-            </li>
-            <li>
-              Website:
-              <a href="https://araopj.tech" target="_blank"
-                >https://araopj.tech</a
-              >
-            </li>
-            <li>
-              Facebook:
-              <a href="https://facebook.com/pitzzahh" target="_blank"
-                >@pitzzahh</a
-              >
-            </li>
-          </ul>
+          <!-- Add Social Icons -->
+
+          <div>
+            <a href="https://github.com/pitzzahh" target="_blank">
+              <img
+                src="assets/socials/github.svg"
+                alt="GitHub Icon linked to pitzzahh github account"
+              />
+            </a>
+  
+            <a href="https://twitter.com/pitzzahh" target="_blank">
+              <img
+                src="assets/socials/twitter.svg"
+                alt="Twitter Icon linked to pitzzahh twitter account"
+              />
+            </a>
+
+            <a href="https://facebook.com/pitzzahh" target="_blank">
+              <img
+                src="assets/socials/facebook.svg"
+                alt="Twitter Icon linked to pitzzahh twitter account"
+              />
+            </a>
+
+            <a href="https://araopj.tech" target="_blank">
+              <img
+                src="assets/socials/website.svg"
+                alt="Web Icon linked to pitzzahh portfolio"
+              />
+            </a>
+          </div>
+
         </div>
 
         <div class="mail">
@@ -510,28 +514,6 @@
       </div>
       <div><p>Under Construction &#9881;</p></div>
     </footer>
-
-    <script>
-      var forEach = function (t, o, r) {
-        if ("[object Object]" === Object.prototype.toString.call(t))
-          for (var c in t)
-            Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
-        else for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t);
-      };
-
-      var hamburgers = document.querySelectorAll(".hamburger");
-      if (hamburgers.length > 0) {
-        forEach(hamburgers, function (hamburger) {
-          hamburger.addEventListener(
-            "click",
-            function () {
-              this.classList.toggle("is-active");
-            },
-            console.log("clicked"),
-            false
-          );
-        });
-      }
-    </script>
+    <script src="scripts/menu.js" type="text/javascript"></script>
   </body>
 </html>

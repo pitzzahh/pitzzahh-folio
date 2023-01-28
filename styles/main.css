@@ -51,7 +51,9 @@ img {
 header {
   padding: 2em var(--padding-left-right);
   position: -webkit-sticky;
+  position: sticky;
   top: 0;
+  z-index: 1;
 }
 header div {
   display: flex;
@@ -279,17 +281,20 @@ header #nav-links li .current-page {
   padding: 1em 0;
   font-size: 1.25em;
 }
-#contact ul {
-  padding: 1em 2em;
+#contact .socials div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
 }
-#contact ul li {
-  font-size: 0.8125em;
+#contact .socials div a {
+  margin: 0.5em;
 }
 #contact .email {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0 0.5em 0;
+  padding: 0 0 0.5em 0;
 }
 #contact .email .mail {
   height: 2.1875em;
@@ -357,7 +362,6 @@ footer p span {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 2em var(--padding-left-right);
   }
   header div {
     display: flex;
