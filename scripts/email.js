@@ -32,6 +32,11 @@ function sendEmail() {
     return;
   }
 
+  if(!fromEmail.validity.valid) {
+    alert("Please enter a valid email address");
+    return;
+  }
+
   emailjs
     .send(serviceId, templateId, params, publicKey)
     .then((res) => {

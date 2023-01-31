@@ -298,54 +298,62 @@ header #nav-links li .current-page {
   margin: 0.5em;
   width: 2em;
 }
-#contact .email {
-  display: flex;
-  justify-content: space-between;
+#contact #email-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   align-items: center;
+  grid-gap: 0.5em;
 }
-#contact .email div > input {
-  margin-bottom: 0.5em;
-}
-#contact .email .mail {
+#contact #email-wrapper .mail {
   height: 2.1875em;
-  width: 100%;
   border: none;
   border-radius: 0.625em;
   padding: 0 1em;
+  width: 100%;
   background: #383838;
   color: #f1f0ee;
 }
-#contact .email .empty-error {
+#contact #email-wrapper .empty-error {
   border: 2px solid red;
 }
-#contact .email svg {
-  height: 2.1875em;
-}
-#contact .email svg:hover {
-  cursor: pointer;
-  transform: translateX(0.5em);
-}
-#contact .message-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#contact .message-container textarea {
-  display: block;
+#contact #email-wrapper #message-content {
   padding: 1em;
-  width: 100%;
   border: none;
+  width: 100%;
   border-radius: 0.625em;
   background: #383838;
   color: #f1f0ee;
 }
-#contact:nth-child(2) {
+#contact #email-wrapper #send-button {
+  height: 2.1875em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 0.5em;
+  background: #383838;
+  color: #f1f0ee;
+  -webkit-animation: button-width 1s ease-in-out forwards;
+          animation: button-width 1s ease-in-out forwards;
+}
+#contact #email-wrapper #send-button:hover {
+  cursor: pointer;
+  width: 100%;
+  -webkit-animation: button-width-hover 1s ease-in-out forwards;
+          animation: button-width-hover 1s ease-in-out forwards;
+}
+#contact #email-wrapper #send-button:active {
+  background-color: #d33432;
+  color: white;
+}
+#contact #email-wrapper:nth-child(2) {
   transition-delay: 200ms;
 }
-#contact:nth-child(4) {
+#contact #email-wrapper:nth-child(4) {
   transition-delay: 400ms;
 }
-#contact:nth-child(6) {
+#contact #email-wrapper:nth-child(6) {
   transition-delay: 600ms;
 }
 
@@ -453,6 +461,38 @@ header div #menu-button {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
+  }
+}
+@-webkit-keyframes button-width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 120px;
+  }
+}
+@keyframes button-width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 120px;
+  }
+}
+@-webkit-keyframes button-width-hover {
+  0% {
+    width: 120px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes button-width-hover {
+  0% {
+    width: 120px;
+  }
+  100% {
+    width: 100%;
   }
 }
 .animate-from-bottom,

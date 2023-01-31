@@ -335,21 +335,19 @@ header {
     }
   }
 
-  .email {
+  #email-wrapper {
     $height: 2.1875em;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     align-items: center;
-    div > input {
-      margin-bottom: .5em;
-    }
-
+    grid-gap: .5em;
     .mail {
       height: $height;
-      width: 100%;
       border: none;
       border-radius: 0.625em;
       padding: 0 1em;
+      width: 100%;
       background: #383838;
       color: $dark-mode-color;
     }
@@ -358,39 +356,44 @@ header {
       border: 2px solid red;
     }
 
-    svg {
-      height: $height;
-
-      &:hover {
-        cursor: pointer;
-        transform: translateX(0.5em);
-      }
-    }
-  }
-
-  .message-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    textarea {
-      display: block;
+    #message-content {
       padding: 1em;
-      width: 100%;
       border: none;
+      width: 100%;
       border-radius: 0.625em;
       background: #383838;
       color: $dark-mode-color;
     }
-  }
 
-  &:nth-child(2) {
-    transition-delay: 200ms;
-  }
-  &:nth-child(4) {
-    transition-delay: 400ms;
-  }
-  &:nth-child(6) {
-    transition-delay: 600ms;
+    #send-button {
+      height: $height;
+      width: fit-content;
+      border: none;
+      border-radius: 0.5em;
+      background: #383838;
+      color: $dark-mode-color;
+      animation: button-width 1s ease-in-out forwards;
+      &:hover {
+        cursor: pointer;
+        width: 100%;
+        animation: button-width-hover 1s ease-in-out forwards;
+      }
+
+      &:active {
+        background-color: #d33432;
+        color: white;
+      }
+    }
+
+    &:nth-child(2) {
+      transition-delay: 200ms;
+    }
+    &:nth-child(4) {
+      transition-delay: 400ms;
+    }
+    &:nth-child(6) {
+      transition-delay: 600ms;
+    }
   }
 }
 
@@ -513,5 +516,23 @@ footer {
 @media only screen and (min-width: 1300px) {
   :root {
     --padding-left-right: 23rem;
+  }
+}
+
+@keyframes button-width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+@keyframes button-width-hover {
+  0% {
+    width: 120px;
+  }
+  100% {
+    width: 100%;
   }
 }
