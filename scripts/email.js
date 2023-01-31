@@ -32,7 +32,7 @@ function sendEmail() {
     return;
   }
 
-  if(!fromEmail.validity.valid) {
+  if(isInvalidEmail(fromEmail.value)) {
     alert("Please enter a valid email address");
     return;
   }
@@ -47,4 +47,9 @@ function sendEmail() {
       console.log(res);
     })
     .catch((err) => alert(err));
+}
+
+function isInvalidEmail(email) {
+  var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return !re.test(email);
 }
