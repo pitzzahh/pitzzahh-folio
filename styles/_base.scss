@@ -340,7 +340,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0.5em 0;
+    div > input {
+      margin-bottom: .5em;
+    }
+
     .mail {
       height: $height;
       width: 100%;
@@ -350,8 +353,18 @@ header {
       background: #383838;
       color: $dark-mode-color;
     }
+
+    .empty-error {
+      border: 2px solid red;
+    }
+
     svg {
       height: $height;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateX(0.5em);
+      }
     }
   }
 

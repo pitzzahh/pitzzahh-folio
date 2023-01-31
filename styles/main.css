@@ -302,7 +302,9 @@ header #nav-links li .current-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 0.5em 0;
+}
+#contact .email div > input {
+  margin-bottom: 0.5em;
 }
 #contact .email .mail {
   height: 2.1875em;
@@ -313,8 +315,15 @@ header #nav-links li .current-page {
   background: #383838;
   color: #f1f0ee;
 }
+#contact .email .empty-error {
+  border: 2px solid red;
+}
 #contact .email svg {
   height: 2.1875em;
+}
+#contact .email svg:hover {
+  cursor: pointer;
+  transform: translateX(0.5em);
 }
 #contact .message-container {
   display: flex;

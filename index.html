@@ -17,9 +17,16 @@
     />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="dist/hamburgers.css" />
-    <script defer src="scripts/main.js"></script>
-    <script defer src="scripts/animations.js"></script>
-    <title>Peter John Arao</title>
+    <title>Peter John Arao - Software Developer</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("C1NaPEP0WSql9qQwI");
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -477,13 +484,23 @@
 
         <div class="mail">
           <div class="email animate-from-left">
-            <input
-              class="mail"
-              href="mailto:"
-              type="email u-input"
-              placeholder="Email:"
-            />
+            <div>
+              <input
+                id="from-name"
+                class="mail"
+                href="mailto:"
+                type="email u-input"
+                placeholder="Name:"
+              />
+              <input
+                id="from-email"
+                class="mail"
+                type="email u-input"
+                placeholder="Email:"
+              />
+            </div>
             <svg
+              onclick="sendEmail()"
               viewBox="0 0 35 35"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -497,7 +514,7 @@
           <div class="message-container animate-from-right">
             <textarea
               name="message"
-              id="u-message"
+              id="message-content"
               cols="30"
               rows="10"
               placeholder="Message:"
@@ -517,14 +534,14 @@
         <path
           d="M3.81138 13.3096C3.035 14.065 1.79834 14.065 1.02196 13.3096L0.973271 13.2622C0.166218 12.477 0.166217 11.1806 0.97327 10.3953L10.6053 1.02364C11.3817 0.268243 12.6183 0.268244 13.3947 1.02364L23.0267 10.3953C23.8338 11.1806 23.8338 12.477 23.0267 13.2622L22.978 13.3096C22.2017 14.065 20.965 14.065 20.1886 13.3096L13.3947 6.69932C12.6183 5.94392 11.3817 5.94392 10.6053 6.69932L3.81138 13.3096Z"
           fill="#B5B5B5"
-          >
+        >
           <animate
-          attributeName="transform"
-          begin="0s"
-          dur="1.5s"
-          values="translate(0, 0); translate(0, -8); translate(0, 0)"
-          repeatCount="indefinite"
-        />
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            values="translate(0, 0); translate(0, -8); translate(0, 0)"
+            repeatCount="indefinite"
+          />
         </path>
       </svg>
     </main>
@@ -536,5 +553,8 @@
       <div><p>Under Construction &#9881;</p></div>
     </footer>
     <script src="scripts/menu.js" type="text/javascript"></script>
+    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/animations.js"></script>
+    <script defer src="scripts/email.js"></script>
   </body>
 </html>
